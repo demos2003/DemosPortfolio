@@ -1,0 +1,97 @@
+.LandingNavBar{
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+    width: 100%;
+    background-color: black;
+    color: white;
+   
+}
+
+.NavmiddleSection{
+    display: flex;
+    flex-direction: row;
+}
+
+body{
+    margin: 0;
+}
+
+.NavStart{
+    width: 25%;
+    /* background-color: yellow; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.NavEnd{
+    width: 25%;
+    align-items: center;
+    /* background-color: blue; */
+    justify-content: center;
+    display: flex;
+}
+
+.NavmiddleSection{
+    width: 40%;
+    justify-content: space-around;
+    /* background-color: pink; */
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+.NavBTN{
+   background-color: #9400D3;
+   padding: 5px;
+   border-radius: 3px;
+}
+
+
+.progressMainWrapper{
+    /* background-color: white; */
+    height: 15px;
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    z-index: 1;
+    width: 100%;
+}
+
+.progressMainStyle{
+    height: 5px;
+    background-color: #9400D3;
+   
+}
+
+.navBarHolder{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.NavLinks{
+    color: white;
+    text-decoration: none;
+  
+    
+}
+.active p {
+    color: white;
+    border-bottom: 3px solid #9400D3;
+    animation: border-animation 0.5s linear forwards;
+  }
+  
+  @keyframes border-animation {
+    0% {
+     width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  

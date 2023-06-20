@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.NavmiddleSection{
+  font-family: 'Bruno Ace';
+  font-size: 14px;
+}
+
+.NavBTN{
+  font-family: 'Bruno Ace';
+  font-size: 14px;
+
+}
+
+.introTxt{
+  font-family: 'Bruno Ace';
+  font-size: 14px;
+
+}
+
+
+.colorChange{
+  font-family: 'Bruno Ace';
+  z-index: -1 !important;
+  
+    
+}
+
+.ServicesSection{
+  font-family: 'Bruno Ace';
+}
+
+.skillSection{
+  font-family: 'Bruno Ace';
+}
+
+.MyprojectS{
+  font-family: 'Bruno Ace';
+}

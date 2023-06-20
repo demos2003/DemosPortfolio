@@ -1,0 +1,119 @@
+.contactHolder {
+  width: 90%;
+  height: 100vh;
+  background-color: blueviolet;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: "Bruno Ace";
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contactInfo {
+  width: 50%;
+  /* background-color: red; */
+  height: 90%;
+}
+
+.contactInfoCopy {
+  margin-top: 80px;
+}
+
+.infoHolder {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 45%;
+}
+
+.socialLinksHolder {
+  display: flex;
+  flex-direction: row;
+
+  width: 30%;
+  justify-content: space-between;
+}
+
+.socialLinks {
+  display: flex;
+  margin-top: 100px;
+}
+
+.contactForm {
+  background-color: white;
+  width: 90%;
+  border-radius: 5px;
+  margin-left: 10%;
+}
+
+.contactFormHolder {
+  display: flex;
+  height: 90%;
+  width: 50%;
+}
+
+.Form-Container {
+  display: flex;
+  height: 90%;
+  width: 45%;
+  background-color: white;
+  justify-content: center;
+  margin-left: 5%;
+  border-radius: 5px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.active1 {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.infoHolder:hover {
+  cursor: pointer;
+}
+
+.iconHolder {
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.iconHolder2 {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 10px;
+  width: 27px;
+}
+
+.formImputHolder{
+ margin-left: 5%;
+ margin-top: 40px;
+ 
+}
+
+.textInput{
+  width: 93%;
+  height: 50px;
+  margin-bottom: 20px;
+  
+}
+
+.textInput2{
+  width: 40%;
+  margin-top: 20px;
+  background-color: blueviolet;
+  border: none;
+  height: 50px;
+}
+
+.messageCard{
+  margin-top: 5px;
+}

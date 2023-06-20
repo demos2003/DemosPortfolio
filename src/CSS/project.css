@@ -1,0 +1,75 @@
+.projectHolder{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cardContainer{
+    width: 320px;
+    height: 220px;
+    margin-bottom: 50px;
+    
+}
+
+.cardContainer:hover > .projectCard{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.projectCard{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: relative;
+    transition: transform 1500ms;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    transform-style: preserve-3d;
+}
+
+.front, .back{
+    backface-visibility: hidden;
+}
+
+
+.Myprojects{
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: 'Bruno Ace';
+    margin-top: 80px;
+}
+
+.back{
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 200px;
+    background-color: blueviolet;
+    padding: 10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.projectImage{
+    background-color: red;
+    width: 100%;
+    height: 180px;
+}
+
+.back-style{
+    font-size: 11px;
+   
+}
+
+.extended-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  
+  .slide-down {
+    height: 100px; 
+  }
