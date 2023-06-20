@@ -4,9 +4,8 @@ import "../CSS/landing.css";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import {  AiOutlineInstagram } from "react-icons/ai";
+import { AiOutlineInstagram } from "react-icons/ai";
 import { FiTwitter, FiLinkedin } from "react-icons/fi";
-
 
 const hue = keyframes`
  from {
@@ -58,29 +57,35 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="introImg">
-          <iframe src="https://embed.lottiefiles.com/animation/63487" width={800} height={500} title="LandingIframe" style={{border:"none", marginTop:-60}}></iframe>
+          <div className="landinganimation">
+            <iframe
+              src="https://embed.lottiefiles.com/animation/63487"
+              width={800}
+              height={500}
+              title="LandingIframe"
+              style={{ border: "none", marginTop: -60 }}
+            ></iframe>
+          </div>
+
           <div className="socialLinks link2">
-            <div className="socialLinksHolder3">
-
-            </div>
-          <div className="socialLinksHolder2">
-
-            <div className="iconHolder">
-              <FiTwitter fontSize={20} />
-            </div>
-            <div></div>
-            <div className="iconHolder">
-              <AiOutlineInstagram fontSize={20} />
-            </div>
-            <div className="iconHolder">
-              <FiLinkedin fontSize={20} />
+            <div className="socialLinksHolder3"></div>
+            <div className="socialLinksHolder2">
+              <div className="iconHolder">
+                <FiTwitter fontSize={20} />
+              </div>
+              
+              <div className="iconHolder">
+                <AiOutlineInstagram fontSize={20} />
+              </div>
+              <div className="iconHolder">
+                <FiLinkedin fontSize={20} />
+              </div>
             </div>
           </div>
         </div>
-        </div>
       </div>
       {/*
-           */}
+       */}
     </div>
   );
 };

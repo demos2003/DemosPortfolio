@@ -182,3 +182,43 @@
   width: 20px;
   
 }
+
+@media screen and (max-width:425px) {
+  .midBody{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .landinganimation{
+    display: none;
+  }
+
+  .introTxt{
+    width: 100%;
+  }
+
+  .socialLinksHolder2{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    position: fixed;
+    bottom: -40px;
+   
+    
+  }
+
+  .socialLinksHolder3{
+    display: none;
+  }
+
+  .iconHolder{
+    margin-right: 30px;
+  }
+
+  .aboutBtn{
+    margin-top: 50px;
+  
+  }
+  
+}

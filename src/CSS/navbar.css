@@ -85,6 +85,11 @@ body{
     animation: border-animation 0.5s linear forwards;
   }
   
+  .hamburger{
+    display: none;
+ 
+  }
+
   @keyframes border-animation {
     0% {
      width: 0;
@@ -94,4 +99,27 @@ body{
     }
   }
   
+  @media screen and (max-width:425px) {
+    .NavmiddleSection{
+        display: none;
+    }
+    .NavBTN{
+        display: none;
+    }
+
+    .hamburger{
+        display: contents;
+        background-color: #9400D3;
+        width: 50px;
+        height: 50px;
+    }
+
+    .LandingNavBar{
+        
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+  }
   

@@ -3,6 +3,7 @@ import "../CSS/navbar.css";
 import "../index.css";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import {GiHamburgerMenu} from "react-icons/gi"
 
 const Navbar = () => {
   const [scrollTop, setScrollTop] = useState(0);
@@ -51,6 +52,9 @@ const Navbar = () => {
         <div className="NavEnd">
           <div className="NavBTN">
             <NavLink to="/contact">Lets Talk</NavLink>
+          </div>
+          <div className="hamburger">
+            <GiHamburgerMenu/>
           </div>
         </div>
       </div>
