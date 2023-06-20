@@ -173,7 +173,7 @@ const Contact = () => {
       {/* <div className="contactFormHolder">
         <div className="contactForm"> */}
       <div className="Form-Container">
-          <h2 style={{ marginTop: -100, marginLeft:20 }}>Leave A Message ?</h2>
+          <h2 className="cardHeader">Leave A Message ?</h2>
           <ContactUs />
       </div>
     </div>

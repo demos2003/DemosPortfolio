@@ -41,12 +41,12 @@
   margin-top: 100px;
 }
 
-.contactForm {
-  background-color: white;
+/* .contactForm {
+  background-color: red;
   width: 90%;
   border-radius: 5px;
   margin-left: 10%;
-}
+} */
 
 .contactFormHolder {
   display: flex;
@@ -94,7 +94,7 @@
 }
 
 .formImputHolder{
- margin-left: 5%;
+ margin-left: 0%;
  margin-top: 40px;
  
 }
@@ -116,4 +116,67 @@
 
 .messageCard{
   margin-top: 5px;
+}
+
+.cardHeader{
+  margin-top: -100px;
+  margin-left: 20px;
+
+}
+
+@media screen and (max-width:425px) {
+  .contactHolder {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 30px;
+ 
+  }
+  .contactInfo{
+    width: 100%;
+  }
+
+  .contactFormHolder {
+    
+    width: 100%;
+  }
+
+  .infoHolder {
+    
+    width: 100%;
+  }
+   .Form-Container{
+    width: 100%;
+    align-items: center;
+   
+   }
+  
+   .socialLinksHolder {
+    display: flex;
+    flex-direction: row;
+  
+    width: 30%;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    margin-top: -20px;
+  }
+  .formImputHolder{
+    margin-left: 5%;
+    /* padding-top: 25px; */
+    
+   }
+
+   .cardHeader{
+    margin-top: 10px;
+    margin-left: 20px;
+  
+  }
+  .Form-Container {
+ 
+    margin-left: 0%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+   
+  
+  }
 }

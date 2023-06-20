@@ -5,6 +5,7 @@
     width: 100%;
     background-color: black;
     color: white;
+    z-index: 1 !important;
    
 }
 
@@ -98,6 +99,25 @@ body{
       width: 100%;
     }
   }
+
+  .DropdownContent {
+    position: absolute;
+    margin-top: 140px;
+    right: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: white;
+  
+  }
+
+  .DropdownLinks{
+    padding: 5px;
+    text-decoration: none;
+  }
+  
   
   @media screen and (max-width:425px) {
     .NavmiddleSection{
@@ -116,9 +136,13 @@ body{
 
     .LandingNavBar{
         
-        width: 100%;
+        width: 90%;
         display: flex;
         justify-content: space-between;
+        padding-left: 10%;
+        /* padding-right: 5%; */
+    
+        
     }
     
   }

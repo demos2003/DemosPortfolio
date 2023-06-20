@@ -202,9 +202,7 @@
     display: flex;
     flex-direction: row;
     height: 70px;
-    position: fixed;
-    bottom: -40px;
-   
+    margin-top: 290px;
     
   }
 
@@ -217,8 +215,18 @@
   }
 
   .aboutBtn{
-    margin-top: 50px;
+    display: none;
   
+  }
+
+  .skillSection{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .contentabc{
+    width: 100%;
+    margin-top: 50px;
   }
   
 }

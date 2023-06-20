@@ -8,6 +8,7 @@ const Skills = () => {
       <Navbar />
       <div className="skillSection" id="about">
         <div className="contentabc">
+          <div className="landinganimation">
           <iframe
             src="https://embed.lottiefiles.com/animation/109119"
             width={600}
@@ -15,6 +16,7 @@ const Skills = () => {
             style={{ border: "none" }}
             title="SkillIframe"
           ></iframe>
+          </div>
           <div className="serviceTexts">
             <p>Our Services</p>
             <p style={{ fontSize: 30 }}>How can I be of Services to You.</p>
