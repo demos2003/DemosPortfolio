@@ -7,13 +7,14 @@ import Projects from "./Views/Projects";
 import Contact from "./Views/Contact";
 // import Navigation from "./Components/Navigation";
 import Navo from "./Views/Navo";
+import ParticleBackground from "./Components/ParticleBackground";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Simulating loading delay
-    const delay = 9500; // 2 seconds
+    const delay = 900; // 2 seconds
 
     const timeout = setTimeout(() => {
       setIsLoading(false);
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <div className="App">
+ 
       <BrowserRouter>
         {isLoading ? (
           <div
@@ -45,7 +47,7 @@ function App() {
           </div>
         ) : (
           <Routes>
-        
+            
             <Route path="/" element={<LandingPage />} />
             <Route path="/services" element={<Services />} />
             <Route path="/skills" element={<Skills />} />

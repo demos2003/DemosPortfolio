@@ -143,7 +143,6 @@
   flex-direction: column;
   width: 10%;
   justify-content: space-between;
-
   height: 190px;
   position: relative;
 }
@@ -159,9 +158,6 @@
   left: 25px;
 
 }
-
-
-
 
 .iconHolder {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;  
@@ -183,11 +179,26 @@
   
 }
 
+.socialLinks{
+  display: contents;
+}
+
+.Bitmoji{
+  display: none;
+}
+
+
 @media screen and (max-width:425px) {
   .midBody{
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
+
+  .Bitmoji{
+    display: contents;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .landinganimation{
@@ -202,9 +213,12 @@
     display: flex;
     flex-direction: row;
     height: 70px;
-    margin-top: 290px;
+    position: relative;
+    bottom: -490px;
+   
+    /* margin-top: 290px; */
     
-  }
+  } 
 
   .socialLinksHolder3{
     display: none;
@@ -227,6 +241,10 @@
   .contentabc{
     width: 100%;
     margin-top: 50px;
+  }
+
+  .mobileFont{
+    font-size: 15px;
   }
   
 }

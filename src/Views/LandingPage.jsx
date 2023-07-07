@@ -7,6 +7,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FiTwitter, FiLinkedin } from "react-icons/fi";
 
+
 const hue = keyframes`
  from {
    -webkit-filter: hue-rotate(0deg);
@@ -43,8 +44,11 @@ const LandingPage = () => {
           <AnimatedGradientText className="colorChange">
             I'm Demilade (DEMOS),
           </AnimatedGradientText>
-          <h1>Front-End Web/Mobile Developer</h1>
-          <h1>Based In Lagos, Nigeria</h1>
+          <h1 className="mobileFont">Front-End Web/Mobile Developer</h1>
+          <h1 className="mobileFont">Based In Lagos, Nigeria</h1>
+          <div className="Bitmoji">
+            <img src="/images/Bitmiji1.jpeg" width={250}/>
+          </div>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
             ullam cupiditate officia quaerat aliquam quidem tempore quibusdam

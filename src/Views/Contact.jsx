@@ -10,8 +10,8 @@ import { BiArrowBack } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 AOS.init();
 
 const Contact = () => {
@@ -30,19 +30,19 @@ const Contact = () => {
       setCopied(false);
     }, 3000);
 
-    if (content === 'Download Resume') {
-      const fileUrl = 'https://drive.google.com/drive/my-drive';
-    fetch(fileUrl)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'document.pdf'; // Set the desired filename here
-        link.click();
-        URL.revokeObjectURL(url);
-      })
-      .catch((error) => console.log(error));
+    if (content === "Download Resume") {
+      const fileUrl = "https://drive.google.com/drive/my-drive";
+      fetch(fileUrl)
+        .then((response) => response.blob())
+        .then((blob) => {
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = "document.pdf"; // Set the desired filename here
+          link.click();
+          URL.revokeObjectURL(url);
+        })
+        .catch((error) => console.log(error));
     }
   };
 
@@ -80,14 +80,26 @@ const Contact = () => {
     return (
       <form ref={form} onSubmit={sendEmail}>
         <div className="formImputHolder">
-          <label>Name</label>
-          <input type="text" name="user_name" className="textInput" />
-          <label>Email</label>
-          <input type="email" name="user_email" className="textInput" />
-          <label>Message</label>
-          <textarea name="message" className="textInput" />
-          <input type="submit" value="Send" className="textInput2" />
-          {isSubmitted && <div data-aos="fade-left" className="messageCard">Message Submitted</div>}
+          <div className="formcomponents">
+            <label>Name</label>
+            <input type="text" name="user_name" className="textInput" />
+          </div>
+          <div className="formcomponents">
+            <label>Email</label>
+            <input type="email" name="user_email" className="textInput" />
+          </div>
+          <div className="formcomponents">
+            <label>Message</label>
+            <textarea name="message" className="textInput" />
+          </div>
+          <div className="formcomponents">
+            <input type="submit" value="Send" className="textInput2" />
+          </div>
+          {isSubmitted && (
+            <div data-aos="fade-left" className="messageCard">
+              Message Submitted
+            </div>
+          )}
         </div>
       </form>
     );
@@ -144,16 +156,14 @@ const Contact = () => {
             </p>
           </div>
           <div
-        className={`infoHolder ${
-          activeInfo === 'Download Resume' ? 'active1' : ''
-        }`}
-        onClick={() => handleClick('Download Resume')}
-      >
-        <GrMail style={{ marginLeft: 10 }} />
-        <p style={{ marginLeft: 10 }}>
-          Download Resume
-        </p>
-      </div>
+            className={`infoHolder ${
+              activeInfo === "Download Resume" ? "active1" : ""
+            }`}
+            onClick={() => handleClick("Download Resume")}
+          >
+            <GrMail style={{ marginLeft: 10 }} />
+            <p style={{ marginLeft: 10 }}>Download Resume</p>
+          </div>
         </div>
         <div className="socialLinks">
           <div className="socialLinksHolder">
@@ -173,8 +183,8 @@ const Contact = () => {
       {/* <div className="contactFormHolder">
         <div className="contactForm"> */}
       <div className="Form-Container">
-          <h2 className="cardHeader">Leave A Message ?</h2>
-          <ContactUs />
+        <h2 className="cardHeader" style={{marginTop:-40}}>Leave A Message ?</h2>
+        <ContactUs />
       </div>
     </div>
     //   </div>

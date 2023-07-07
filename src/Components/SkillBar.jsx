@@ -65,12 +65,12 @@ const SkillBar = () => {
   };
 
   const handleHover6 = () => {
-    setIsHovered1(true);
+    setIsHovered6(true);
   };
 
   
   const handleMouseLeave6 = () => {
-    setIsHovered1(false);
+    setIsHovered6(false);
   };
 
   const handleHover7 = () => {
@@ -148,7 +148,7 @@ const SkillBar = () => {
       </div>
       <div className="skillItem" onMouseEnter={handleHover1} onMouseLeave={handleMouseLeave1} >
         <div className="skillInfo">
-          <p>API's</p>
+          <p>NEXT JS</p>
           <p>70%</p>
         </div>
         <div className={`progress-line ${isHovered1 ? 'show' : 'hide'}`} data-percent="70%">
