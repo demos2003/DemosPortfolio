@@ -3,16 +3,12 @@ import "../CSS/navbar.css";
 import "../index.css";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
+
 import { Link } from "react-router-dom";
+import SwipeableTemporaryDrawer from "./SideNav";
 
 const Navbar = () => {
   const [scrollTop, setScrollTop] = useState(0);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const dropdownToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   const onScroll = () => {
     const winScroll = document.documentElement.scrollTop;
@@ -63,29 +59,9 @@ const Navbar = () => {
           <div className="NavBTN">
             <NavLink to="/contact">Lets Talk</NavLink>
           </div>
-          <div className="hamburger" onClick={() => dropdownToggle()}>
-            <GiHamburgerMenu />
+          <div className="hamburger" >
+            <SwipeableTemporaryDrawer />
           </div>
-          {isMenuOpen && (
-            <div className="DropdownContent">
-              {/* <div className="contentSection1"> */}
-              <Link to="/" className="DropdownLinks">
-                Home
-              </Link>
-              <Link to="/skills" className="DropdownLinks">
-                Skills
-              </Link>
-              {/* </div> */}
-              {/* <div className="contentSection2"> */}
-              <Link to="/projects" className="DropdownLinks">
-                Projects
-              </Link>
-              <Link to="/contact" className="DropdownLinks">
-                Contact
-              </Link>
-              {/* </div> */}
-            </div>
-          )}
         </div>
       </div>
       <div className="progressMainWrapper">
