@@ -94,7 +94,6 @@ const LandingPage = () => {
           <AnimatedGradientText className="colorChange">
             I'm Demilade (DEMOS),
           </AnimatedGradientText>
-          
           <div className="mobileFont typeEffect"><TypingEffect className="typeEfect2"/><h1 style={{ fontSize:16}}> Developer</h1> </div>
           <h1 className="mobileFont Bitspace">Based In Lagos, Nigeria</h1>
           <div className="Bitmoji">
