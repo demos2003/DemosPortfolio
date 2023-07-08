@@ -1,6 +1,7 @@
 .midBody {
-  width: 90%;
+  width: 100%;
   margin-left: 5%;
+  
   margin-top: 10%;
   display: flex;
   flex-direction: row;
@@ -187,16 +188,28 @@
   display: none;
 }
 
+.typeEffect{
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+ 
+}
+
+
 
 @media screen and (max-width:425px) {
   .midBody{
     display: flex;
     flex-direction: column;
     width: 100%;
+   
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .Bitmoji{
     display: contents;
+  
    
   }
 
@@ -205,7 +218,8 @@
   }
 
   .introTxt{
-    width: 100%;
+    width: 90%;
+    
   }
 
   .Bitspace{
@@ -222,7 +236,7 @@
     flex-direction: row;
     height: 70px;
     position: relative;
-    bottom: -390px;
+    bottom: -450px;
    
     /* margin-top: 290px; */
     

@@ -6,6 +6,7 @@ import { keyframes } from "styled-components";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FiTwitter, FiLinkedin } from "react-icons/fi";
+import { useState, useEffect } from 'react';
 
 
 const hue = keyframes`
@@ -34,17 +35,67 @@ const AnimatedGradientText = styled.h1`
   -moz-osx-font-smoothing: grayscale;
 `;
 
+
+const TypingEffect = () => {
+  const [text, setText] = useState('');
+  const phrases = ['Front-End Web ', 'Front-End Mobile'];
+
+  useEffect(() => {
+    let currentPhrase = 0;
+    let currentText = '';
+    let isDeleting = false;
+    let currentIndex = 0;
+
+    const type = () => {
+      const currentPhraseLength = phrases[currentPhrase].length;
+
+      if (isDeleting) {
+        // Deleting characters
+        currentText = phrases[currentPhrase].substring(0, currentIndex - 1);
+        currentIndex--;
+
+        if (currentText === '') {
+          // Deleting complete for current phrase
+          isDeleting = false;
+          currentPhrase = (currentPhrase + 1) % phrases.length;
+        }
+      } else {
+        // Typing characters
+        currentText = phrases[currentPhrase].substring(0, currentIndex + 1);
+        currentIndex++;
+
+        if (currentText === phrases[currentPhrase]) {
+          // Typing complete for current phrase
+          isDeleting = true;
+        }
+      }
+
+      setText(currentText);
+    };
+
+    const intervalId = setInterval(type, 200);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  return <h1 style={{marginRight:10, fontSize:16}}>{text }</h1>;
+};
+
+
+
 const LandingPage = () => {
+
   return (
     <div className="LandingBody">
-      <Navbar />
+       <Navbar />
       <div className="midBody">
         <div className="introTxt">
           <h1>Hello, </h1>
           <AnimatedGradientText className="colorChange">
             I'm Demilade (DEMOS),
           </AnimatedGradientText>
-          <h1 className="mobileFont">Front-End Web/Mobile Developer</h1>
+          
+          <div className="mobileFont typeEffect"><TypingEffect className="typeEfect2"/><h1 style={{ fontSize:16}}> Developer</h1> </div>
           <h1 className="mobileFont Bitspace">Based In Lagos, Nigeria</h1>
           <div className="Bitmoji">
             <img src="/images/Bitmiji1.jpeg" width={250}/>
@@ -88,8 +139,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      {/*
-       */}
+     
     </div>
   );
 };
