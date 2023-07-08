@@ -161,7 +161,7 @@
   }
    .Form-Container{
     width: 100%;
-    align-items: center;
+   
    
    }
   
@@ -174,15 +174,9 @@
     margin-bottom: 100px;
     margin-top: -20px;
   }
-  .formImputHolder{
-    margin-left: 5%;
-    /* padding-top: 25px; */
-    
-   }
 
    .cardHeader{
-    margin-top: 10px;
-    margin-left: 20px;
+    font-size: 18px;
   
   }
   .Form-Container {
@@ -192,5 +186,9 @@
     padding-bottom: 20px;
    
   
+  }
+
+  .textInput{
+    width: 100% !important;
   }
 }

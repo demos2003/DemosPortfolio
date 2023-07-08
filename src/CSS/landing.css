@@ -197,8 +197,7 @@
 
   .Bitmoji{
     display: contents;
-    margin-top: 20px;
-    margin-bottom: 20px;
+   
   }
 
   .landinganimation{
@@ -208,6 +207,15 @@
   .introTxt{
     width: 100%;
   }
+
+  .Bitspace{
+    margin-bottom: 50px;
+  }
+
+  .Bitspace2{
+    margin-top: 50px;
+  }
+
 
   .socialLinksHolder2{
     display: flex;

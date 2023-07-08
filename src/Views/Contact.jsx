@@ -179,16 +179,12 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="contactFormHolder">
-        <div className="contactForm"> */}
       <div className="Form-Container">
         <h2 className="cardHeader" style={{marginTop:-40}}>Leave A Message ?</h2>
         <ContactUs />
       </div>
     </div>
-    //   </div>
-    // </div>
+
   );
 };
 

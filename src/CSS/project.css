@@ -3,6 +3,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100% !important;
+    
 }
 
 .cardContainer{
@@ -19,7 +21,7 @@
 }
 
 .projectCard{
-    width: 100%;
+    width: 93%;
     height: 100%;
     padding: 10px;
     position: relative;
@@ -82,6 +84,16 @@
   @media screen and (max-width:425px) {
     .projectHolder{
        margin-top: 70px;
+    }
+
+    .projectHolder{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: red;
+        justify-content: center;
+        width: 100% !important;
+        
     }
     
   }

@@ -45,11 +45,11 @@ const LandingPage = () => {
             I'm Demilade (DEMOS),
           </AnimatedGradientText>
           <h1 className="mobileFont">Front-End Web/Mobile Developer</h1>
-          <h1 className="mobileFont">Based In Lagos, Nigeria</h1>
+          <h1 className="mobileFont Bitspace">Based In Lagos, Nigeria</h1>
           <div className="Bitmoji">
             <img src="/images/Bitmiji1.jpeg" width={250}/>
           </div>
-          <p>
+          <p className="Bitspace2">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
             ullam cupiditate officia quaerat aliquam quidem tempore quibusdam
             quis atque consequuntur? Repellendus, libero atque enim odio quas

@@ -39,44 +39,44 @@ export default function SwipeableTemporaryDrawer() {
     >
       <List>
         <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
-            <Link to="/" className="DropdownLinks">
+          <Link to="/" className="DropdownLinks">
+            <ListItemButton>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
               <ListItemText primary="Home" />
-            </Link>
-          </ListItemButton>
+            </ListItemButton>
+          </Link>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <CodeIcon />
-            </ListItemIcon>
-            <Link to="/skills" className="DropdownLinks">
+          <Link to="/skills" className="DropdownLinks">
+            <ListItemButton>
+              <ListItemIcon>
+                <CodeIcon />
+              </ListItemIcon>
               <ListItemText primary="Skills" />
-            </Link>
-          </ListItemButton>
+            </ListItemButton>
+          </Link>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <WorkIcon />
-            </ListItemIcon>
-            <Link to="/projects" className="DropdownLinks">
+          <Link to="/projects" className="DropdownLinks">
+            <ListItemButton>
+              <ListItemIcon>
+                <WorkIcon />
+              </ListItemIcon>
               <ListItemText primary="Projects" />
-            </Link>
-          </ListItemButton>
+            </ListItemButton>
+          </Link>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <ContactMailIcon />
-            </ListItemIcon>
-            <Link to="/contact" className="DropdownLinks">
+          <Link to="/contact" className="DropdownLinks">
+            <ListItemButton>
+              <ListItemIcon>
+                <ContactMailIcon />
+              </ListItemIcon>
               <ListItemText primary="Contacts" />
-            </Link>
-          </ListItemButton>
+            </ListItemButton>
+          </Link>
         </ListItem>
       </List>
     </Box>
