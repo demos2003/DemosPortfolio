@@ -85,7 +85,17 @@ export default function SwipeableTemporaryDrawer() {
         </ListItem>
         <ListItem disablePadding>
           <ListItemButton>
-            <ListItemIcon>
+            <ListItemIcon style={{display:"flex", flexDirection:"row", alignItems:"center", width:"70%", justifyContent:"space-between"}}>
+              <div>
+              {
+              theme === "dark" ? (
+                <p>Dark Mode</p>
+              ) : (
+                <p>Light Mode</p>
+              )
+
+             }
+              </div>
               <div className="switch1">
                 <ReactSwitch
                   onChange={toggleTheme}
@@ -93,7 +103,7 @@ export default function SwipeableTemporaryDrawer() {
                 />
               </div>
             </ListItemIcon>
-          
+           
           </ListItemButton>
         </ListItem>
       </List>
