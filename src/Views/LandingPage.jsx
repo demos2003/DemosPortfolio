@@ -6,8 +6,8 @@ import { keyframes } from "styled-components";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FiTwitter, FiLinkedin } from "react-icons/fi";
-import { useState, useEffect } from 'react';
-
+import { useState, useEffect } from "react";
+import Typed from "react-typed";
 
 const hue = keyframes`
  from {
@@ -35,69 +35,41 @@ const AnimatedGradientText = styled.h1`
   -moz-osx-font-smoothing: grayscale;
 `;
 
-
 const TypingEffect = () => {
-  const [text, setText] = useState('');
-  const phrases = ['Front-End Web ', 'Front-End Mobile'];
-
-  useEffect(() => {
-    let currentPhrase = 0;
-    let currentText = '';
-    let isDeleting = false;
-    let currentIndex = 0;
-
-    const type = () => {
-      const currentPhraseLength = phrases[currentPhrase].length;
-
-      if (isDeleting) {
-        // Deleting characters
-        currentText = phrases[currentPhrase].substring(0, currentIndex - 1);
-        currentIndex--;
-
-        if (currentText === '') {
-          // Deleting complete for current phrase
-          isDeleting = false;
-          currentPhrase = (currentPhrase + 1) % phrases.length;
-        }
-      } else {
-        // Typing characters
-        currentText = phrases[currentPhrase].substring(0, currentIndex + 1);
-        currentIndex++;
-
-        if (currentText === phrases[currentPhrase]) {
-          // Typing complete for current phrase
-          isDeleting = true;
-        }
-      }
-
-      setText(currentText);
-    };
-
-    const intervalId = setInterval(type, 200);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-  return <h1 style={{marginRight:10, fontSize:16}}>{text }</h1>;
-};
-
-
-
-const LandingPage = () => {
+  const phrases = ["Front-End Web", "Front-End Mobile"];
 
   return (
+    <div>
+      <h4>
+        <Typed
+          strings={phrases}
+          typeSpeed={50}
+          backSpeed={30}
+          loop
+          backDelay={5000}
+        />
+      </h4>
+    </div>
+  );
+};
+
+const LandingPage = () => {
+  return (
     <div className="LandingBody">
-       <Navbar  />
+      <Navbar />
       <div className="midBody">
-        <div className="introTxt" >
+        <div className="introTxt">
           <h1>Hello, </h1>
           <AnimatedGradientText className="colorChange">
             I'm Demilade (DEMOS),
           </AnimatedGradientText>
-          <div className="mobileFont typeEffect"><TypingEffect className="typeEfect2"/><h1 style={{ fontSize:16}}> Developer</h1> </div>
+          <div className="mobileFont typeEffect">
+            <TypingEffect className="typeEfect2" />
+            <h1 style={{ fontSize: 16, marginLeft:5 }}> Developer</h1>{" "}
+          </div>
           <h1 className="mobileFont Bitspace">Based In Lagos, Nigeria</h1>
           <div className="Bitmoji">
-            <img src="/images/Bitmiji1.jpeg" width={250}/>
+            <img src="/images/Bitmiji1.jpeg" width={250} />
           </div>
           <p className="Bitspace2">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
@@ -110,21 +82,21 @@ const LandingPage = () => {
             <AiOutlineArrowRight style={{ fontWeight: "bolder" }} />
           </div>
         </div>
-          <div className="socialLinks link2">
-            <div className="socialLinksHolder3"></div>
-            <div className="socialLinksHolder2">
-              <div className="iconHolder">
-                <FiTwitter fontSize={20} />
-              </div>
-              
-              <div className="iconHolder">
-                <AiOutlineInstagram fontSize={20} />
-              </div>
-              <div className="iconHolder">
-                <FiLinkedin fontSize={20} />
-              </div>
+        <div className="socialLinks link2">
+          <div className="socialLinksHolder3"></div>
+          <div className="socialLinksHolder2">
+            <div className="iconHolder">
+              <FiTwitter fontSize={20} />
+            </div>
+
+            <div className="iconHolder">
+              <AiOutlineInstagram fontSize={20} />
+            </div>
+            <div className="iconHolder">
+              <FiLinkedin fontSize={20} />
             </div>
           </div>
+        </div>
         <div className="introImg">
           <div className="landinganimation">
             <iframe
@@ -135,12 +107,8 @@ const LandingPage = () => {
               style={{ border: "none", marginTop: -30 }}
             ></iframe>
           </div>
-        
-
-        
         </div>
       </div>
-     
     </div>
   );
 };

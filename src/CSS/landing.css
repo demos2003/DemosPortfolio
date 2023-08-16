@@ -191,7 +191,12 @@
   display: flex;
   flex-direction: row;
   font-size: 13px;
+  align-items: center;
  
+}
+
+.typeEfect2{
+  margin-right: 10px;
 }
 
 
