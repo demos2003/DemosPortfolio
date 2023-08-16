@@ -36,7 +36,7 @@ const AnimatedGradientText = styled.h1`
 `;
 
 const TypingEffect = () => {
-  const phrases = ["Front-End Web", "Front-End Mobile"];
+  const phrases = ["Front-End Web Developer", "Front-End Mobile Developer"];
 
   return (
     <div>
@@ -65,7 +65,7 @@ const LandingPage = () => {
           </AnimatedGradientText>
           <div className="mobileFont typeEffect">
             <TypingEffect className="typeEfect2" />
-            <h1 style={{ fontSize: 16, marginLeft:5 }}> Developer</h1>{" "}
+            {/* <h1 style={{ fontSize: 16, marginLeft:5 }}> Developer</h1>{" "} */}
           </div>
           <h1 className="mobileFont Bitspace">Based In Lagos, Nigeria</h1>
           <div className="Bitmoji">
