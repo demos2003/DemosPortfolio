@@ -14,6 +14,9 @@ import WorkIcon from "@mui/icons-material/Work";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../App";
+import ReactSwitch from "react-switch";
+import { useContext } from "react";
 
 export default function SwipeableTemporaryDrawer() {
   const [state, setState] = React.useState(false);
@@ -29,6 +32,8 @@ export default function SwipeableTemporaryDrawer() {
 
     setState(open);
   };
+
+  const {theme, toggleTheme} = useContext(ThemeContext)
 
   const list = (
     <Box
@@ -77,6 +82,19 @@ export default function SwipeableTemporaryDrawer() {
               <ListItemText primary="Contacts" />
             </ListItemButton>
           </Link>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon>
+              <div className="switch1">
+                <ReactSwitch
+                  onChange={toggleTheme}
+                  checked={theme === "dark"}
+                />
+              </div>
+            </ListItemIcon>
+          
+          </ListItemButton>
         </ListItem>
       </List>
     </Box>

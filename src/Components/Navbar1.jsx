@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../CSS/navbar.css";
 import "../index.css";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-
-import { Link } from "react-router-dom";
 import SwipeableTemporaryDrawer from "./SideNav";
+import ReactSwitch from "react-switch";
+import { ThemeContext } from "../App";
+
+
 
 const Navbar = () => {
   const [scrollTop, setScrollTop] = useState(0);
@@ -26,6 +28,8 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const {theme, toggleTheme} = useContext(ThemeContext)
 
   return (
     <div className="navBarHolder">
@@ -54,8 +58,12 @@ const Navbar = () => {
               <p>Projects</p>
             </NavLink>
           </div>
+          
         </div>
         <div className="NavEnd">
+        <div className="switch">
+            <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
+          </div>
           <div className="NavBTN">
             <NavLink to="/contact">Lets Talk</NavLink>
           </div>

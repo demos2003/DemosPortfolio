@@ -5,16 +5,16 @@ import Services from "./Views/Services";
 import Skills from "./Views/Skills";
 import Projects from "./Views/Projects";
 import Contact from "./Views/Contact";
-// import Navigation from "./Components/Navigation";
-import Navo from "./Views/Navo";
-import ParticleBackground from "./Components/ParticleBackground";
+import {createContext} from "react"
+import Navbar from "./Components/Navbar1";
+
+export const ThemeContext = createContext(null);
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulating loading delay
-    const delay = 900; // 2 seconds
+    const delay = 9000; // 2 seconds
 
     const timeout = setTimeout(() => {
       setIsLoading(false);
@@ -24,8 +24,16 @@ function App() {
     return () => clearTimeout(timeout);
   }, []);
 
+    const [theme, setTheme] = useState("dark")
+
+     const toggleTheme = () => {
+      setTheme((curr) => (curr === "light" ? "dark" : "light"));
+     };
+
+
   return (
-    <div className="App">
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
+    <div className="App" id={theme}>
  
       <BrowserRouter>
         {isLoading ? (
@@ -36,8 +44,6 @@ function App() {
               justifyContent: "center",
               backgroundColor:"black",
               height:"100vh"
-
-              
             }}
           >
             <iframe 
@@ -47,7 +53,6 @@ function App() {
           </div>
         ) : (
           <Routes>
-            
             <Route path="/" element={<LandingPage />} />
             <Route path="/services" element={<Services />} />
             <Route path="/skills" element={<Skills />} />
@@ -57,7 +62,9 @@ function App() {
         )}
       </BrowserRouter>
     </div>
+    </ThemeContext.Provider>
   );
 }
 
-export default App;
+
+export default App

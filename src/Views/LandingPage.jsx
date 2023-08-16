@@ -87,9 +87,9 @@ const LandingPage = () => {
 
   return (
     <div className="LandingBody">
-       <Navbar />
+       <Navbar  />
       <div className="midBody">
-        <div className="introTxt">
+        <div className="introTxt" >
           <h1>Hello, </h1>
           <AnimatedGradientText className="colorChange">
             I'm Demilade (DEMOS),
@@ -110,17 +110,6 @@ const LandingPage = () => {
             <AiOutlineArrowRight style={{ fontWeight: "bolder" }} />
           </div>
         </div>
-        <div className="introImg">
-          <div className="landinganimation">
-            <iframe
-              src="https://embed.lottiefiles.com/animation/63487"
-              width={800}
-              height={500}
-              title="LandingIframe"
-              style={{ border: "none", marginTop: -60 }}
-            ></iframe>
-          </div>
-
           <div className="socialLinks link2">
             <div className="socialLinksHolder3"></div>
             <div className="socialLinksHolder2">
@@ -136,6 +125,19 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
+        <div className="introImg">
+          <div className="landinganimation">
+            <iframe
+              src="https://embed.lottiefiles.com/animation/63487"
+              width={800}
+              height={500}
+              title="LandingIframe"
+              style={{ border: "none", marginTop: -30 }}
+            ></iframe>
+          </div>
+        
+
+        
         </div>
       </div>
      

@@ -28,6 +28,7 @@
     transition: transform 1500ms;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     transform-style: preserve-3d;
+    background-color: white;
 }
 
 .front, .back{
@@ -40,7 +41,8 @@
     padding-left: 5%;
     padding-right: 5%;
     font-family: 'Bruno Ace';
-    margin-top: 80px;
+    padding-top: 45px;
+    height: 93.5vh;
 }
 
 .back{
@@ -81,6 +83,31 @@
     height: 100px; 
   }
 
+
+  #dark .projectCard{
+    background-color: blueviolet;
+    border-radius: 5px;
+  }
+
+  #dark .projecttitle{
+    color: black;
+  }
+
+  #light .projecttitle{
+    color: blueviolet;
+  }
+
+  #dark .projectTitle{
+    color: white;
+  }
+
+  #dark .back{
+    background-color: white;
+  
+}
+
+
+
   @media screen and (max-width:425px) {
     .projectHolder{
        margin-top: 70px;
@@ -93,6 +120,11 @@
         justify-content: center;
         width: 100% !important;
         
+    }
+
+    .Myprojects{
+        
+        height: 100%;
     }
     
   }

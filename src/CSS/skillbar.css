@@ -115,3 +115,14 @@
     }
 }
 
+
+#dark .progress-line span {
+    background-color: black;
+
+}
+
+#dark .progress-line{
+    background-color: white;
+
+}
+

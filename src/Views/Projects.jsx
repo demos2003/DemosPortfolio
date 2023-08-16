@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar1";
 import { useState } from "react";
 import "../CSS/project.css";
 
-const Projects = () => {
+const Projects = ({theme}) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const toggleFlip = () => {
@@ -13,8 +13,8 @@ const Projects = () => {
   return (
     <div>
       <Navbar />
-      <div className="Myprojects">
-        <p style={{ textAlign: "center" }}>My Projects</p>
+      <div className="Myprojects" id={theme}>
+        <p style={{ textAlign: "center", marginBottom:40, fontSize:25 }} className="projectTitle">My Projects</p>
         <div className="projectHolder">
           <div className="cardContainer" onClick={toggleFlip}>
             <div className={`projectCard ${isFlipped ? "flipped" : ""}`}>
@@ -27,7 +27,7 @@ const Projects = () => {
                     style={{ borderRadius: "5px" }}
                   />
                 </div>
-                <p style={{ color: "blueviolet" }}>Simple Chat App</p>
+                <p  className="projecttitle">Simple Chat App</p>
               </div>
               <div className="back">
                 <p>Project Description</p>
@@ -59,7 +59,7 @@ const Projects = () => {
                     style={{ borderRadius: "5px" }}
                   />
                 </div>
-                <p style={{ color: "blueviolet" }}>Instagram Clone</p>
+                <p className="projecttitle">Instagram Clone</p>
               </div>
               <div className="back">
                 <p>Back of card</p>
@@ -97,7 +97,7 @@ const Projects = () => {
                     style={{ borderRadius: "5px" }}
                   />
                 </div>
-                <p style={{ color: "blueviolet" }}>Automated Payroll System</p>
+                <p className="projecttitle">Automated Payroll System</p>
               </div>
               <div className="back">
                 <p>Project Description</p>

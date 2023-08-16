@@ -19,6 +19,7 @@
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
+    "react-switch": "^7.0.0",
     "react-tsparticles": "^2.10.1",
     "styled-components": "^5.3.10",
     "tsparticles": "^2.10.1",

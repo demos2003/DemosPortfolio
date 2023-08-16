@@ -1,10 +1,10 @@
 .LandingNavBar{
     display: flex;
     flex-direction: row;
-    /* background-color: red; */
     width: 100%;
     background-color: black;
     color: white;
+    border-bottom: 1px solid gray;
    
    
 }
@@ -56,11 +56,7 @@ body{
 
 
 .progressMainWrapper{
-    /* background-color: white; */
     height: 15px;
-    /* position: fixed;
-    top: 0;
-    left: 0; */
     z-index: 1;
     width: 100%;
 }
@@ -93,6 +89,10 @@ body{
   .hamburger{
     display: none;
  
+  }
+
+  .switch{
+    margin-right: 20px;
   }
 
   @keyframes border-animation {
@@ -149,6 +149,9 @@ body{
         /* padding-right: 5%; */
     
         
+    }
+    .switch{
+        display:none
     }
     
   }
