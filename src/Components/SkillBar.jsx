@@ -139,7 +139,7 @@ const SkillBar = () => {
       </div>
       <div className="skillItem" onMouseEnter={handleHover5} onMouseLeave={handleMouseLeave5}>
         <div className="skillInfo">
-          <p>BOOTSTRAP</p>
+          <p>JAVA (Spring boot)</p>
           <p>90%</p>
         </div>
         <div className={`progress-line ${isHovered5 ? 'show' : 'hide'}`} data-percent="90%">

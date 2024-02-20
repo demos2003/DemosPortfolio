@@ -65,7 +65,6 @@ const LandingPage = () => {
           </AnimatedGradientText>
           <div className="mobileFont typeEffect">
             <TypingEffect className="typeEfect2" />
-            {/* <h1 style={{ fontSize: 16, marginLeft:5 }}> Developer</h1>{" "} */}
           </div>
           <h1 className="mobileFont Bitspace">Based In Lagos, Nigeria</h1>
           <div className="Bitmoji">
