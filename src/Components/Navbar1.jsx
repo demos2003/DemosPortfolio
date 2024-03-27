@@ -35,7 +35,7 @@ const Navbar = () => {
     <div className="navBarHolder">
       <div className="LandingNavBar">
         <div className="NavStart">
-          <img src="/images/DemosV3.png" height="40px" />
+          <img src="/images/DemosV3.png" alt="" height="40px" />
         </div>
         <div className="NavmiddleSection">
           <div>

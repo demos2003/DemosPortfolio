@@ -28,17 +28,17 @@
   width: 45%;
 }
 
-.socialLinksHolder {
+/* .socialLinksHolder {
   display: flex;
   flex-direction: row;
   width: 30%;
   justify-content: space-between;
-}
+} */
 
-.socialLinks {
+/* .socialLinks {
   display: flex;
   margin-top: 100px;
-}
+} */
 
 /* .contactForm {
   background-color: red;
@@ -165,7 +165,7 @@
    
    }
   
-   .socialLinksHolder {
+   /* .socialLinksHolder {
     display: flex;
     flex-direction: row;
   
@@ -173,7 +173,7 @@
     justify-content: space-between;
     margin-bottom: 100px;
     margin-top: -20px;
-  }
+  } */
 
    .cardHeader{
     font-size: 18px;

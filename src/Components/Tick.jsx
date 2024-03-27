@@ -8,6 +8,7 @@ const Tick = () => {
             5y3cTEFGzfsQvazjU/s4ykEPLhvo/5ktPv80JjUwPP8XZJwZqAMuyIjKQRomflgM83Yx6s9vMt/CCupsCutYykqCGYrjAygpaDhuklv2DXqq6cEXwfvr+ltdFWGZFwnBA8k/EgdVxqX3Lwmls8vBDPzHhXJQPfv9YyHCnEkJJfsLzwYuSsJH2hvILCt5dFnJ0yrlztdL6QaFI8HjcUFu0Br3du3WUkRVF/GikNHhfsLC6F2dm5qDLO1tbEpWYkjZBoUuob6iJKmfHOxk1GUgqJJsXlroOiklKYm/vLlFG4c3fcZCStkGhS6ly1XErfrT/iLiOphVgfIoUviauqq0BNywJ3fe0yGbl5xWsmA5JdSDQpQ3f74i4DSXoh0dJXvNKUFRISQ0o8ZSAkJEL6wou/hw8m+UVjPNKUFRISBt6aX8vnJ7EgIYJBQgSDhAgGCREMEiIYJEQwSIhgkBDBICGCIbwQo3HZktYaWTmObK3h8/mAZb+xZN9oZCaJgqyyP3nzmZFRc6DYPQ4bljmNGzd6oWzvB+b+vXsjRvOZQUm09kzWr8ecqqqBEyed157piy+/geofzpr7P18WsT2TpleENzCbn1+ALa/lw8DAbXAK/f0DfE7zCwvLG5ilsXJJFLDjM7a5wxZ/+Oskg+vdv0HutmJHSOnvH+Bz6en53XwN+4MJ2eIPUTRWj2cK9rW1glLwrPrqxLc8/yZSofcHAnzMmKZwDt3d/8sIBoNw8FBlqH4wlyQaqakvvWCstrCFqhUM8arqH3kxxB9VGstE0Tc9K4ePGcduTVNIbV1DaHWlP1QU/XlJRLCpsNFIOVyKUwgGg1Bb5zEbKctpWWWSyIQ6lPJW49jXNp6PVtcarBkHDx+3thqvkBIBWWPv4IUSDhyLHq5EsHsnrtkTrYYMDQ3zpS3OgRfwUJoSPjLC2ZCR8Zyi6acd9XcVKp+LW8jW4iv6H5E0Vi6rrAuvZo0Opgmxqcy3OGa9E+cg3NKWIAiCIAiCIAiCIAiCIAiCIAiCIKRn5D+BoU
             zS6fyrTwAAAABJRU5ErkJggg=="
             width={42}
+            alt=''
             />
     </div>
   )

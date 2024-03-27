@@ -10,7 +10,6 @@ const SkillBar = () => {
   const [isHovered4, setIsHovered4] = useState(false);
   const [isHovered5, setIsHovered5] = useState(false);
   const [isHovered6, setIsHovered6] = useState(false);
-  const [isHovered7, setIsHovered7] = useState(false);
 
   const handleHover = () => {
     setIsHovered(true);
@@ -73,14 +72,6 @@ const SkillBar = () => {
     setIsHovered6(false);
   };
 
-  const handleHover7 = () => {
-    setIsHovered1(true);
-  };
-
-  
-  const handleMouseLeave7= () => {
-    setIsHovered1(false);
-  };
 
 
 

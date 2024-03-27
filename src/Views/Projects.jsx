@@ -1,134 +1,49 @@
 import React from "react";
 import Navbar from "../Components/Navbar1";
-import { useState } from "react";
 import "../CSS/project.css";
+import { ProjectData } from "../Components/data/Projects";
 
-const Projects = ({theme}) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+const Projects = ({ theme }) => {
 
-  const toggleFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
+  console.log(ProjectData)
 
   return (
-    <div>
+    <div className="project_page">
       <Navbar />
       <div className="Myprojects" id={theme}>
-        <p style={{ textAlign: "center", marginBottom:40, fontSize:25 }} className="projectTitle">My Projects</p>
+        <p style={{ textAlign: "center", marginBottom: 40, fontSize: 25 }} className="projectTitle">My Projects</p>
         <div className="projectHolder">
-          <div className="cardContainer" onClick={toggleFlip}>
-            <div className={`projectCard ${isFlipped ? "flipped" : ""}`}>
-              <div className="front">
+          {
+            ProjectData.map((project) => (
+
+              <div className="cardContainer">
+              <div className={`projectCard`}>
                 <div className="projectImage">
                   <img
                     src="/images/ChatApp.jpeg"
                     width="100%"
                     height="180px"
                     style={{ borderRadius: "5px" }}
+                    alt=""
                   />
                 </div>
-                <p  className="projecttitle">Simple Chat App</p>
-              </div>
-              <div className="back">
-                <p>Project Description</p>
-                <div className="back-style">
-                  <p>
-                    <b>Description</b> : A Simple Chat App
-                  </p>
-                  <p>
-                    <b>Stack</b>: #React Native, #CSS, #Firebase{" "}
-                  </p>
-                  <p>
-                    <b>GitHub Link</b>: Opeifa.olutoyin@premierfeedsltd.com
-                  </p>
-                  <p>
-                    <b>Duration</b>: 1 week
-                  </p>
+                <p className="projecttitle">{project.name}</p>
+                <div className="card_links">
+                  <div className="more_btn">
+                    <p>See More..</p>
+                  </div>
+                  <div className="github_link">
+                    <a href="/car">
+                      <p>Github</p>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="cardContainer" onClick={toggleFlip}>
-            <div className={`projectCard ${isFlipped ? "flipped" : ""}`}>
-              <div className="front">
-                <div className="projectImage">
-                  <img
-                    src="/images/IgClone.jpeg"
-                    width="100%"
-                    height="180px"
-                    style={{ borderRadius: "5px" }}
-                  />
-                </div>
-                <p className="projecttitle">Instagram Clone</p>
-              </div>
-              <div className="back">
-                <p>Back of card</p>
-              </div>
-            </div>
-          </div>
-          <div className="cardContainer" onClick={toggleFlip}>
-            <div className={`projectCard ${isFlipped ? "flipped" : ""}`}>
-              <div className="front">
-                <div className="projectImage"></div>
-              </div>
-              <div className="back">
-                <p>Back of card</p>
-              </div>
-            </div>
-          </div>
-          <div className="cardContainer" onClick={toggleFlip}>
-            <div className={`projectCard ${isFlipped ? "flipped" : ""}`}>
-              <div className="front">
-                <div className="projectImage"></div>
-              </div>
-              <div className="back">
-                <p>Back of card</p>
-              </div>
-            </div>
-          </div>
-          <div className="cardContainer" onClick={toggleFlip}>
-            <div className={`projectCard ${isFlipped ? "flipped" : ""}`}>
-              <div className="front">
-                <div className="projectImage">
-                  <img
-                    src="/images/payroll.png"
-                    width="100%"
-                    height="180px"
-                    style={{ borderRadius: "5px" }}
-                  />
-                </div>
-                <p className="projecttitle">Automated Payroll System</p>
-              </div>
-              <div className="back">
-                <p>Project Description</p>
-                <div className="back-style">
-                  <p>
-                    <b>Description</b> : Automated Payroll Syatem based on Staff
-                    attendance and Location.
-                  </p>
-                  <p>
-                    <b>Stack</b>: #React JS, #BootStrapp, #CSS, #Node Js{" "}
-                  </p>
-                  <p>
-                    <b>GitHub Link</b>: Opeifa.olutoyin@premierfeedsltd.com
-                  </p>
-                  <p>
-                    <b>Duration</b>: 3 weeks
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="cardContainer" onClick={toggleFlip}>
-            <div className={`projectCard ${isFlipped ? "flipped" : ""}`}>
-              <div className="front">
-                <div className="projectImage"></div>
-              </div>
-              <div className="back">
-                <p>Back of card</p>
-              </div>
-            </div>
-          </div>
+
+            ))
+          }
+
         </div>
       </div>
     </div>

@@ -6,7 +6,8 @@ import Skills from "./Views/Skills";
 import Projects from "./Views/Projects";
 import Contact from "./Views/Contact";
 import {createContext} from "react"
-import Navbar from "./Components/Navbar1";
+
+import ParticlesComponent from "./Components/particles";
 
 export const ThemeContext = createContext(null);
 
@@ -14,7 +15,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const delay = 9000; // 2 seconds
+    const delay = 1000; // 2 seconds
 
     const timeout = setTimeout(() => {
       setIsLoading(false);
@@ -34,6 +35,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
     <div className="App" id={theme}>
+      <ParticlesComponent id="particles"/>
  
       <BrowserRouter>
         {isLoading ? (
@@ -49,7 +51,7 @@ function App() {
             <iframe 
             style={{paddingTop:0,
             height: "300px", border:"none"}}
-            src="https://embed.lottiefiles.com/animation/143896" ></iframe>
+            src="https://embed.lottiefiles.com/animation/143896" title="loader"></iframe>
           </div>
         ) : (
           <Routes>

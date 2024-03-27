@@ -1,130 +1,118 @@
-.projectHolder{
+
+.projectHolder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100% ;
+
+}
+
+.cardContainer {
+  width: 320px;
+  height: 290px;
+  margin-bottom: 50px;
+}
+
+.projectCard {
+  width: 93%;
+  padding: 10px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  background-color: white;
+}
+
+
+
+
+.Myprojects {
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: 'Bruno Ace';
+  padding-top: 45px;
+}
+
+
+.projectImage {
+  border: 1px solid rgb(207, 207, 207);
+  width: 99%;
+  height: 180px;
+  border-radius: 5px;
+
+}
+
+.back-style {
+  font-size: 11px;
+  height: 160px;
+
+}
+
+
+
+#dark .projectCard {
+  background-color: blueviolet;
+  border-radius: 5px;
+}
+
+#dark .projecttitle {
+  color: black;
+}
+
+#light .projecttitle {
+  color: blueviolet;
+}
+
+#dark .projectTitle {
+  color: white;
+}
+
+#dark .back {
+  background-color: white;
+
+}
+
+.card_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+
+.github_link p {
+  position: relative;
+  top: 15px;
+  color: black;
+}
+
+.more_btn {
+  background-color: black;
+  color: white;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+
+
+@media screen and (max-width:425px) {
+  .projectHolder {
+    margin-top: 70px;
+  }
+
+  .projectHolder {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100% !important;
-    
-}
-
-.cardContainer{
-    width: 320px;
-    height: 220px;
-    margin-bottom: 50px;
-   
-    
-}
-
-.cardContainer:hover > .projectCard{
-    cursor: pointer;
-    transform: rotateY(180deg);
-}
-
-.projectCard{
-    width: 93%;
-    height: 100%;
-    padding: 10px;
-    position: relative;
-    transition: transform 1500ms;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    transform-style: preserve-3d;
-    background-color: white;
-}
-
-.front, .back{
-    backface-visibility: hidden;
-    z-index: 0 !important;
-}
-
-
-.Myprojects{
-    padding-left: 5%;
-    padding-right: 5%;
-    font-family: 'Bruno Ace';
-    padding-top: 45px;
-    height: 93.5vh;
-}
-
-.back{
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    bottom: 255px;
-    background-color: blueviolet;
-    padding: 10px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    width: 100% !important;
+
+  }
+
+  .Myprojects {
+
+    height: 100%;
+  }
+
 }
-
-.projectImage{
-    border: 1px solid rgb(207, 207, 207);
-    width: 99%;
-    height: 180px;
-    border-radius: 5px;
-   
-}
-
-.back-style{
-    font-size: 11px;
-    height: 160px;
-   
-}
-
-.extended-content {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
-  }
-  
-  .slide-down {
-    height: 100px; 
-  }
-
-
-  #dark .projectCard{
-    background-color: blueviolet;
-    border-radius: 5px;
-  }
-
-  #dark .projecttitle{
-    color: black;
-  }
-
-  #light .projecttitle{
-    color: blueviolet;
-  }
-
-  #dark .projectTitle{
-    color: white;
-  }
-
-  #dark .back{
-    background-color: white;
-  
-}
-
-
-
-  @media screen and (max-width:425px) {
-    .projectHolder{
-       margin-top: 70px;
-    }
-
-    .projectHolder{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100% !important;
-        
-    }
-
-    .Myprojects{
-        
-        height: 100%;
-    }
-    
-  }
