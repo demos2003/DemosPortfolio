@@ -77,7 +77,7 @@ const ParticlesComponent = (props) => {
             default: "bounce",
           },
           random: true,
-          speed: 1,
+          speed: 2,
           straight: false,
         },
         number: {
@@ -90,7 +90,7 @@ const ParticlesComponent = (props) => {
           value: 1.0,
         },
         shape: {
-          type: "circle",
+          type: "square",
         },
         size: {
           value: { min: 1, max: 3 },

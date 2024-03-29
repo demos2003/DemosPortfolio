@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./Views/LandingPage";
-import Services from "./Views/Services";
+import Services from "./Views/ProjectInfo";
 import Skills from "./Views/Skills";
 import Projects from "./Views/Projects";
 import Contact from "./Views/Contact";
+import ProjectInfo from "./Views/ProjectInfo";
 import {createContext} from "react"
 
 import ParticlesComponent from "./Components/particles";
@@ -60,6 +61,7 @@ function App() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/projectInfo/:projectId" element={<ProjectInfo />} />
           </Routes>
         )}
       </BrowserRouter>

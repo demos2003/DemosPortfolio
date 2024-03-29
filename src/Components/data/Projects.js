@@ -1,7 +1,7 @@
 export const ProjectData = [
     {
       "id": 1,
-      "name": "Project 1",
+      "name": "Automated Payroll System",
       "description": "Description of Project 1",
       "githublink": "https://github.com/user/project1",
       "duration": "3 months",

@@ -4,8 +4,12 @@
  padding-top: 10%;
   display: flex;
   flex-direction: row;
-  height: 80.2vh;
 
+
+}
+
+.LandingBody{
+  height: 100vh;
 }
 
 
@@ -115,15 +119,20 @@
   margin-top: 40px;
 }
 
+.skill_page{
+  height: 100vh;
+ }
+
 .skillSection {
   margin-left: 5%;
   margin-right: 5%;
   width: 90%;
   display: flex;
   flex-direction: row;
-  margin-top: 40px;
+  padding-top: 5%;
+ justify-content: center;
   align-items: center;
-  height: 94.5vh;
+  
 }
 
 .contentabc {
@@ -140,10 +149,7 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.socialLinksHolder2 {
 
-
-}
 
 
 
@@ -278,6 +284,8 @@
     height: 100%;
     
   }
+
+
   .contentabc{
     width: 100%;
     margin-top: 50px;

@@ -4,7 +4,7 @@ import SkillBar from "../Components/SkillBar";
 
 const Skills = () => {
   return (
-    <div>
+    <div className="skill_page">
       <Navbar />
       <div className="skillSection" id="about">
         <div className="contentabc">

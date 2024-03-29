@@ -10,24 +10,7 @@ import { ThemeContext } from "../App";
 
 
 const Navbar = () => {
-  const [scrollTop, setScrollTop] = useState(0);
 
-  const onScroll = () => {
-    const winScroll = document.documentElement.scrollTop;
-    const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-
-    const scrolled = (winScroll / height) * 100;
-
-    setScrollTop(scrolled);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   const {theme, toggleTheme} = useContext(ThemeContext)
 
@@ -35,7 +18,7 @@ const Navbar = () => {
     <div className="navBarHolder">
       <div className="LandingNavBar">
         <div className="NavStart">
-          <img src="/images/DemosV3.png" alt="" height="40px" />
+          <img src="/images/DemosV3.png" alt="" height="40px"  style={{borderRadius:10, marginTop:1}}/>
         </div>
         <div className="NavmiddleSection">
           <div>
@@ -71,12 +54,6 @@ const Navbar = () => {
             <SwipeableTemporaryDrawer />
           </div>
         </div>
-      </div>
-      <div className="progressMainWrapper">
-        <div
-          className="progressMainStyle"
-          style={{ width: `${scrollTop}%` }}
-        ></div>
       </div>
     </div>
   );

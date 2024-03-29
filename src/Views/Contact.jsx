@@ -19,6 +19,8 @@ const Contact = () => {
   const [copied, setCopied] = useState(false);
   const [originalText, setOriginalText] = useState("");
 
+  const fileToDownload = 'http://localhost:3000/file_cv.pdf'
+
   const handleClick = (content) => {
     setActiveInfo(content);
     navigator.clipboard.writeText(content);
@@ -45,6 +47,17 @@ const Contact = () => {
         .catch((error) => console.log(error));
     }
   };
+
+    const handleDownload = (url) => {
+      const fileName = url.split('/').pop()
+      const aTag = document.createElement('a')
+      aTag.href = url
+      aTag.setAttribute('download', fileName )
+      document.body.appendChild(aTag)
+      aTag.click();
+      aTag.remove();
+    };
+
 
   const ContactUs = () => {
     const form = useRef();
@@ -159,17 +172,17 @@ const Contact = () => {
             className={`infoHolder ${
               activeInfo === "Download Resume" ? "active1" : ""
             }`}
-            onClick={() => handleClick("Download Resume")}
+            onClick={() => handleDownload(fileToDownload)}
           >
             <GrMail style={{ marginLeft: 10 }} />
             <p style={{ marginLeft: 10 }}>Download Resume</p>
           </div>
         </div>
-        <div className="socialLinks">
-          <div className="socialLinksHolder">
+        <div className="icon_section_container">
             <div className="iconHolder">
               <FiTwitter fontSize={20} />
             </div>
+
             <div className="iconHolder">
               <AiOutlineInstagram fontSize={20} />
             </div>
@@ -177,7 +190,6 @@ const Contact = () => {
               <FiLinkedin fontSize={20} />
             </div>
           </div>
-        </div>
       </div>
       <div className="Form-Container">
         <h2 className="cardHeader" style={{marginTop:-40}}>Leave A Message ?</h2>

@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar1";
 import "../CSS/project.css";
 import { ProjectData } from "../Components/data/Projects";
+import { Link } from "react-router-dom";
 
 const Projects = ({ theme }) => {
 
@@ -29,9 +30,9 @@ const Projects = ({ theme }) => {
                 </div>
                 <p className="projecttitle">{project.name}</p>
                 <div className="card_links">
-                  <div className="more_btn">
+                    <Link to={`/projectInfo/${project.id}`} className="more_btn">
                     <p>See More..</p>
-                  </div>
+                    </Link>
                   <div className="github_link">
                     <a href="/car">
                       <p>Github</p>

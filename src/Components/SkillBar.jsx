@@ -22,7 +22,6 @@ const SkillBar = () => {
     setIsHovered1(true);
   };
 
-  
   const handleMouseLeave1 = () => {
     setIsHovered1(false);
   };
@@ -40,7 +39,6 @@ const SkillBar = () => {
     setIsHovered3(true);
   };
 
-  
   const handleMouseLeave3 = () => {
     setIsHovered3(false);
   };
@@ -72,11 +70,7 @@ const SkillBar = () => {
     setIsHovered6(false);
   };
 
-
-
-
   return (
-    // <div className="skillSection" id="about">
     <div className="skillItems">
       <div className="skillItem" onMouseEnter={handleHover} onMouseLeave={handleMouseLeave}>
         <div className="skillInfo">
@@ -86,9 +80,7 @@ const SkillBar = () => {
           <div className={`progress-line ${isHovered ? 'show' : 'hide'}`} data-percent="90%">
             <span style={{ width: "90%" }}></span>
           </div>
-      
       </div>
-
       <div className="skillItem"  onMouseEnter={handleHover6} onMouseLeave={handleMouseLeave6}>
         <div className="skillInfo">
           <p>CSS</p>
@@ -98,7 +90,6 @@ const SkillBar = () => {
           <span style={{ width: "90%" }}></span>
         </div>
       </div>
-
       <div className="skillItem" onMouseEnter={handleHover2} onMouseLeave={handleMouseLeave2}>
         <div className="skillInfo">
           <p>JAVASCRIPT</p>
@@ -108,7 +99,6 @@ const SkillBar = () => {
           <span style={{ width: "80%" }}></span>
         </div>
       </div>
-
       <div className="skillItem" onMouseEnter={handleHover3} onMouseLeave={handleMouseLeave3}>
         <div className="skillInfo">
           <p>REACT</p>
@@ -118,7 +108,6 @@ const SkillBar = () => {
           <span style={{ width: "83%" }}></span>
         </div>
       </div>
-
       <div className="skillItem" onMouseEnter={handleHover4} onMouseLeave={handleMouseLeave4}>
         <div className="skillInfo">
           <p>REACT NATIVE</p>
@@ -147,7 +136,7 @@ const SkillBar = () => {
         </div>
       </div>
     </div>
-    // </div>
+
   );
 };
 
