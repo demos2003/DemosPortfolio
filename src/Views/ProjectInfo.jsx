@@ -21,6 +21,7 @@ const ProjectInfo = () => {
             onClick={() => setSelectedProject(project.id)}
           >
             {project.name}
+            
           </div>
         ))}
       </div>

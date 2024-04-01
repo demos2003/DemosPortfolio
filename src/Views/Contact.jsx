@@ -178,7 +178,7 @@ const Contact = () => {
             <p style={{ marginLeft: 10 }}>Download Resume</p>
           </div>
         </div>
-        <div className="icon_section_container">
+        <div className="icon_section_container2">
             <div className="iconHolder">
               <FiTwitter fontSize={20} />
             </div>

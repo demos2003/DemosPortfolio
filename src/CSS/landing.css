@@ -187,6 +187,7 @@
   font-size: 13px;
   align-items: center;
   margin-top: -30px;
+
  }
 
 .typeEfect2{
@@ -218,30 +219,35 @@
   .midBody{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  #dark .LandingBody{
-    background-color: black;
-    height: 1000px
-    
-   
-  }
-
-  .Bitmoji{
-    display: contents;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 200px;
   
-   
   }
+
+  .skill_page{
+    height: 100%;
+   }
+  
+
+
+  .LandingBody{
+    height: 100vh;
+  }
+
+  .landing_section_left{
+    width: 100%;
+  }
+
+
 
   .landinganimation{
     display: none;
   }
 
   .introTxt{
-    width: 90%;
+    width: 100%;
     
   }
 
@@ -254,20 +260,6 @@
   }
 
 
-  .socialLinksHolder2{
-    display: flex;
-    flex-direction: row;
-    height: 70px;
-    width: 100%;
-    margin-top: 600px;
-    margin-left: 15px;
-    
-    
-  } 
-
-  .socialLinksHolder3{
-    display: none;
-  }
 
   .iconHolder{
     margin-right: 30px;
@@ -288,11 +280,19 @@
 
   .contentabc{
     width: 100%;
-    margin-top: 50px;
+    margin-top: 100px;
   }
 
   .mobileFont{
     font-size: 15px;
+  }
+
+  .typeEffect{
+    height: 150px;
+  }
+
+  .icon_section_container{
+    margin-top: 200px;
   }
   
 }

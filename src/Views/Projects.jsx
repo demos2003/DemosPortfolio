@@ -21,7 +21,7 @@ const Projects = ({ theme }) => {
               <div className={`projectCard`}>
                 <div className="projectImage">
                   <img
-                    src="/images/ChatApp.jpeg"
+                    src={project.image}
                     width="100%"
                     height="180px"
                     style={{ borderRadius: "5px" }}

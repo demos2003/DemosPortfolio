@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import "../CSS/navbar.css";
 import "../index.css";
-import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import SwipeableTemporaryDrawer from "./SideNav";
 import ReactSwitch from "react-switch";
@@ -50,11 +49,12 @@ const Navbar = () => {
           <div className="NavBTN">
             <NavLink to="/contact">Lets Talk</NavLink>
           </div>
-          <div className="hamburger" >
-            <SwipeableTemporaryDrawer />
-          </div>
+      
         </div>
       </div>
+      <div className="hamburger" >
+            <SwipeableTemporaryDrawer />
+          </div>
     </div>
   );
 };
