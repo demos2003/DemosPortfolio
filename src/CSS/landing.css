@@ -77,6 +77,11 @@
   padding-left: 5%;
 }
 
+
+.serviceTexts p{
+   margin-bottom:5px;
+}
+
 .serviceCard {
   background-color: white;
   width: 38%;

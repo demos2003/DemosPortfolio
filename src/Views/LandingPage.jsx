@@ -34,9 +34,12 @@ const LandingPage = () => {
       <div className="midBody">
         <div className="landing_section_left">
         <div className="introTxt">
-          <h1>Hello, </h1>
+          <h1>Hi,  I'm Iyidemilade Nasiru, </h1>
+          {/* <h1 className="colorChange">
+           
+          </h1> */}
           <h1 className="colorChange">
-            I'm Iyidemilade Nasiru,
+            BSc Software Engineering.
           </h1>
           <div className="mobileFont typeEffect">
             <TypingEffect className="typeEfect2" />
@@ -65,7 +68,7 @@ const LandingPage = () => {
           <div className="landinganimation">
             <iframe
               src="https://embed.lottiefiles.com/animation/63487"
-              width={650}
+              width={690}
               height={"100%"}
               title="LandingIframe"
               style={{ border: "none", marginTop: -30 }}

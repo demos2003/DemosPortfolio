@@ -7,16 +7,16 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function SimpleAccordion() {
   return (
-    <div style={{ width: 500, position:"relative", top:-19 }}>
+    <div style={{ width: 500, position: "relative", top: -19 }}>
       <p>Mini & Side Projects</p>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-          style={{height:60}}
+          style={{ height: 60 }}
         >
-          <Typography>Automated Payroll System</Typography>
+          <Typography>HTML</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography style={{ lineHeight: 0.4 }}>
@@ -33,9 +33,9 @@ export default function SimpleAccordion() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-          style={{height:60}}
+          style={{ height: 60 }}
         >
-          <Typography>MegaCare Drycleaning Site</Typography>
+          <Typography>CSS</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography style={{ lineHeight: 0.4 }}>
@@ -51,9 +51,9 @@ export default function SimpleAccordion() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-          style={{height:60}}
+          style={{ height: 60 }}
         >
-          <Typography>Ibeji Foundation</Typography>
+          <Typography>Javascript</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography style={{ lineHeight: 0.4 }}>
@@ -70,9 +70,9 @@ export default function SimpleAccordion() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-          style={{height:60}}
+          style={{ height: 60 }}
         >
-          <Typography>Event Booking and Scheduling System</Typography>
+          <Typography>React JS</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography style={{ lineHeight: 0.4 }}>
@@ -89,9 +89,9 @@ export default function SimpleAccordion() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-        style={{height:60}}
+          style={{ height: 60 }}
         >
-          <Typography>Instagram Clone</Typography>
+          <Typography>Next Js</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography style={{ lineHeight: 0.4 }}>
@@ -103,22 +103,22 @@ export default function SimpleAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      {/* <Accordion>
+      <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-          style={{height:60}}
+          style={{ height: 60 }}
         >
-          <Typography>Automated Payroll System</Typography>
+          <Typography>Next Js</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography style={{ lineHeight: 0.4 }}>
-            <p>Description : Automated Payroll Syatem based on </p>
-            <p>Staff attendance and Location.</p>
-            <p>Stack: #React JS, #BootStrapp, #CSS, #Node Js </p>
+            <p>Description : An Instagram clone built using react native with posting </p>
+            <p>updating, and viewing post capabitilies.</p>
+            <p>Stack: #React Native, #Firebase </p>
             <p>GitHub Link: Opeifa.olutoyin@premierfeedsltd.com</p>
-            <p>Duration: 3 weeks</p>
+            <p>Duration: 2 months</p>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -127,21 +127,41 @@ export default function SimpleAccordion() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-          style={{height:60}}
+          style={{ height: 60 }}
         >
-          <Typography>Automated Payroll System</Typography>
+          <Typography>Next Js</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography style={{ lineHeight: 0.4 }}>
-            <p>Description : Automated Payroll Syatem based on </p>
-            <p>Staff attendance and Location.</p>
-            <p>Stack: #React JS, #BootStrapp, #CSS, #Node Js </p>
+            <p>Description : An Instagram clone built using react native with posting </p>
+            <p>updating, and viewing post capabitilies.</p>
+            <p>Stack: #React Native, #Firebase </p>
             <p>GitHub Link: Opeifa.olutoyin@premierfeedsltd.com</p>
-            <p>Duration: 3 weeks</p>
+            <p>Duration: 2 months</p>
           </Typography>
         </AccordionDetails>
       </Accordion>
-       */}
-          </div>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+          style={{ height: 60 }}
+        >
+          <Typography>Next Js</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography style={{ lineHeight: 0.4 }}>
+            <p>Description : An Instagram clone built using react native with posting </p>
+            <p>updating, and viewing post capabitilies.</p>
+            <p>Stack: #React Native, #Firebase </p>
+            <p>GitHub Link: Opeifa.olutoyin@premierfeedsltd.com</p>
+            <p>Duration: 2 months</p>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+
+    </div>
   );
 }

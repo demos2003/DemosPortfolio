@@ -19,7 +19,7 @@
   padding: 10px;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  background-color: white;
+  background-color: black;
 }
 
 
@@ -54,12 +54,17 @@
   border-radius: 5px;
 }
 
+.projectCard {
+  background-color: blueviolet;
+  border-radius: 5px;
+}
+
 #dark .projecttitle {
   color: black;
 }
 
 #light .projecttitle {
-  color: blueviolet;
+  color: black;
 }
 
 #dark .projectTitle {
@@ -84,8 +89,7 @@
   top: 15px;
   color: black;
 }
-
-.more_btn {
+ .more_btn {
   background-color: black;
   color: white;
   width: 130px;
@@ -93,6 +97,11 @@
   justify-content: center;
   border-radius: 5px;
 }
+
+.projecttitle{
+  
+}
+
 
 
 
