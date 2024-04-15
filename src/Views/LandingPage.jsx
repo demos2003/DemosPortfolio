@@ -9,11 +9,11 @@ import Typed from "react-typed";
 
 
 const TypingEffect = () => {
-  const phrases = ["Front-End Web Developer.", "Front-End Mobile Developer.", "Back-End Developer.", "Tech Enthusiast."];
+  const phrases = ["Mobile Applications.", "Web Applications.", "Reliable and Performant APIs.", "Efficient and Secure Database Systems."];
 
   return (
     <div>
-      <h4 style={{fontSize:31}}>
+      <h4 style={{fontSize:40}}>
         <Typed
           strings={phrases}
           typeSpeed={50}
@@ -34,17 +34,15 @@ const LandingPage = () => {
       <div className="midBody">
         <div className="landing_section_left">
         <div className="introTxt">
-          <h1>Hi,  I'm Iyidemilade Nasiru, </h1>
-          {/* <h1 className="colorChange">
-           
-          </h1> */}
-          <h1 className="colorChange">
-            BSc Software Engineering.
-          </h1>
-          <div className="mobileFont typeEffect">
-            <TypingEffect className="typeEfect2" />
+          <h1 style={{color:"blueviolet"}}>Hi, my name is</h1>
+          <h1 className="introTxt_name">Nasiru Iyidemilade Halim.</h1>
+          <div className="introTxt_skills">
+          <h1 style={{marginRight:10, fontSize:40, color:"whitesmoke"}}>I build  </h1>
+          <TypingEffect className="typeEfect2" />
           </div>
-          <h1 className="mobileFont Bitspace">Based In Lagos, Nigeria</h1>
+          <h1 className="colorChange">
+            I'm a software Engineer specializing in building exceptional digital experiences, with real life use cases utilizing new and exciting technology
+          </h1>
           <div className="aboutBtn">
             <p>About Me</p>
             <AiOutlineArrowRight style={{ fontWeight: "bolder" }} />
@@ -64,7 +62,7 @@ const LandingPage = () => {
           </div>
 
         </div>
-        <div className="introImg">
+        {/* <div className="introImg">
           <div className="landinganimation">
             <iframe
               src="https://embed.lottiefiles.com/animation/63487"
@@ -75,7 +73,7 @@ const LandingPage = () => {
 
             ></iframe>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -1,3 +1,6 @@
+.project_page{
+   height: 100vh;
+}
 
 .projectHolder {
   display: flex;
