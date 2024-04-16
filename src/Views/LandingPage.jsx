@@ -13,7 +13,7 @@ const TypingEffect = () => {
 
   return (
     <div>
-      <h4 style={{fontSize:40}}>
+      <h4 className="typed_phrase">
         <Typed
           strings={phrases}
           typeSpeed={50}
@@ -37,7 +37,7 @@ const LandingPage = () => {
           <h1 style={{color:"blueviolet"}}>Hi, my name is</h1>
           <h1 className="introTxt_name">Nasiru Iyidemilade Halim.</h1>
           <div className="introTxt_skills">
-          <h1 style={{marginRight:10, fontSize:40, color:"whitesmoke"}}>I build  </h1>
+          <h1 className="introText_skills_text">I build  </h1>
           <TypingEffect className="typeEfect2" />
           </div>
           <h1 className="colorChange">

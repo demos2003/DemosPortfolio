@@ -1,3 +1,5 @@
+
+
 .midBody {
   width: 80%;
   margin-left: 10%;
@@ -15,7 +17,6 @@
 .colorChange{
   width: 55%;
   font-size: 20px;
-
   margin: 0;
 }
 
@@ -155,7 +156,6 @@
 
 .skill_page{
   height: 100vh;
- 
  }
 
 .skillSection {
@@ -165,17 +165,14 @@
   display: flex;
   flex-direction: row;
   padding-top: 5%;
- justify-content: center;
-  align-items: center;
-  height: 90vh;
-  
+  justify-content: center;
+  align-items: center;  
 }
 
 .contentabc {
   width: 46%;
   margin-right: 4%;
   margin-top: -60px;
-  /* background-color: yellow; */
 }
 
 .aboutMeImg {
@@ -184,10 +181,6 @@
   border-radius: 3px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-
-
-
-
 
 .iconHolder {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;  
@@ -246,6 +239,47 @@
   margin-top: 40px;
   justify-content: space-between;
 }
+
+.introText_skills_text{
+  font-size: 40px;
+  margin-right: 10px;
+  color: whitesmoke;
+}
+
+.typed_phrase{
+  font-size: 40px;
+}
+
+@media screen and (max-width:1366px) {
+  .introTxt_name{
+    font-size: 50px;
+    margin: 0;
+  }
+
+  .introText_skills_text{
+      font-size: 30px;
+  }
+
+  .typed_phrase{
+    font-size: 30px;
+  }
+
+  .aboutBtn {
+    margin-top: 30px;
+  }
+
+  .introTxt_skills{
+    height: 70px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  
+}
+
+
+
+
+
 
 
 
@@ -357,3 +391,4 @@
   
  
 }
+

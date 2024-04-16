@@ -41,10 +41,8 @@ const Projects = ({ theme }) => {
                 </div>
               </div>
             </div>
-
             ))
           }
-
         </div>
       </div>
     </div>
