@@ -258,7 +258,7 @@
   }
 
   .introText_skills_text{
-      font-size: 30px;
+    font-size: 30px;
   }
 
   .typed_phrase{
@@ -276,9 +276,10 @@
   }
   
   .skillSection {
- 
     height: 90%;
   }
+
+
 }
 
 
