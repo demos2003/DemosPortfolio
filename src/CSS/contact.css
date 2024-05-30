@@ -41,7 +41,7 @@
   height: 90%;
   width: 45%;
   background-color: white;
-  justify-content: center;
+ 
   margin-left: 5%;
   border-radius: 5px;
   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
@@ -100,7 +100,49 @@
   width: 100%;
   height: 50px;
   margin-bottom: 20px;
+  border-radius: 6px;
+  border: 2px solid rgb(184, 184, 184);
+  padding-left: 2%;
+  padding-right: 2%;
+  box-sizing: border-box;
+  font-size: 16px;
   
+}
+
+
+.textAreaInput{
+  width: 100%;
+  height: 120px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 2px solid rgb(184, 184, 184);
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  box-sizing: border-box;
+  font-size: 16px;
+  resize: none;
+  
+}
+
+
+
+.textInput:focus{
+
+  border: 2px solid blueviolet;
+  outline: none;
+ 
+}
+
+
+
+.textAreaInput:focus{
+
+  border: 3px solid blueviolet;
+  outline: none;
+  box-sizing: border-box;
+ 
 }
 
 .textInput2{
@@ -109,10 +151,21 @@
   background-color: blueviolet;
   border: none;
   height: 50px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+
+.textInput2:hover{
+  cursor: pointer;
+  background-color: black;
 }
 
 .messageCard{
   margin-top: 5px;
+ 
 }
 
 .cardHeader{

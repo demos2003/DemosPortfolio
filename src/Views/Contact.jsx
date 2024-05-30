@@ -12,14 +12,19 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { TailSpin } from "react-loader-spinner";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 AOS.init();
 
 const Contact = () => {
   const [activeInfo, setActiveInfo] = useState(null);
   const [copied, setCopied] = useState(false);
   const [originalText, setOriginalText] = useState("");
+  
 
-  const fileToDownload = 'http://localhost:3000/file_cv.pdf'
+  const fileToDownload = "http://localhost:3000/file_cv.pdf";
 
   const handleClick = (content) => {
     setActiveInfo(content);
@@ -48,24 +53,52 @@ const Contact = () => {
     }
   };
 
-    const handleDownload = (url) => {
-      const fileName = url.split('/').pop()
-      const aTag = document.createElement('a')
-      aTag.href = url
-      aTag.setAttribute('download', fileName )
-      document.body.appendChild(aTag)
-      aTag.click();
-      aTag.remove();
-    };
-
+  const handleDownload = (url) => {
+    const fileName = url.split("/").pop();
+    const aTag = document.createElement("a");
+    aTag.href = url;
+    aTag.setAttribute("download", fileName);
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  };
 
   const ContactUs = () => {
     const form = useRef();
+    const [formData, setFormData] = useState({
+      user_name: '',
+      user_email: '',
+      user_phone: '',
+      message: '',
+    });
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [displayDuration, setDisplayDuration] = useState(5000);
+    const [isLoading, setIsLoading] = useState(false);
+
+
+    const [errors, setErrors] = useState({});
+
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    };
+  
+    const validateForm = () => {
+      const errors = {};
+      if (!formData.user_name.trim()) errors.user_name = 'Name is required';
+      if (!formData.user_email.trim()) errors.user_email = 'Email is required';
+      if (!formData.user_phone.trim()) errors.user_phone = 'Phone number is required';
+      if (!formData.message.trim()) errors.message = 'Message is required';
+      return errors;
+    };
+
 
     const sendEmail = (e) => {
       e.preventDefault();
+      setIsLoading(true); // Set loading to true when email sending starts
 
       emailjs
         .sendForm(
@@ -80,43 +113,123 @@ const Contact = () => {
             console.log("message sent");
             setIsSubmitted(true); // Set the submission status to true
             form.current.reset(); // Reset the form inputs
+            toast.success("Message sent successfully!", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              transition: Bounce,
+            });
             setTimeout(() => {
               setIsSubmitted(false); // Reset the submission status after the display duration
             }, displayDuration);
+            setIsLoading(false); // Set loading to false when email is successfully sent
           },
           (error) => {
             console.log(error.text);
+            toast.error("Failed to send the message. Please try again.", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              transition: Bounce,
+            });
+            setIsLoading(false); // Set loading to false if an error occurs
           }
         );
     };
 
     return (
       <form ref={form} onSubmit={sendEmail}>
-        <div className="formImputHolder">
-          <div className="formcomponents">
-            <label>Name</label>
-            <input type="text" name="user_name" className="textInput" />
-          </div>
-          <div className="formcomponents">
-            <label>Email</label>
-            <input type="email" name="user_email" className="textInput" />
-          </div>
-          <div className="formcomponents">
-            <label>Message</label>
-            <textarea name="message" className="textInput" />
-          </div>
-          <div className="formcomponents">
-            <input type="submit" value="Send" className="textInput2" />
-          </div>
-          {isSubmitted && (
-            <div data-aos="fade-left" className="messageCard">
-              Message Submitted
+      <div className="formImputHolder">
+        <div className="formcomponents">
+          <label>Name</label>
+          <input
+            type="text"
+            name="user_name"
+            className="textInput"
+            value={formData.user_name}
+            onChange={handleInputChange}
+            placeholder="Nasiru Iyidemilade"
+          />
+          {errors.user_name && <span className="error">{errors.user_name}</span>}
+        </div>
+        <div className="formcomponents">
+          <label>Email</label>
+          <input
+            type="email"
+            name="user_email"
+            className="textInput"
+            value={formData.user_email}
+            onChange={handleInputChange}
+            placeholder="ladenas202@gmail.com"
+          />
+          {errors.user_email && <span className="error">{errors.user_email}</span>}
+        </div>
+        <div className="formcomponents">
+          <label>Phone Number</label>
+          <input
+            type="number"
+            name="user_phone"
+            className="textInput"
+            value={formData.user_phone}
+            onChange={handleInputChange}
+            placeholder="+234 90 616 989 66"
+          />
+          {errors.user_phone && <span className="error">{errors.user_phone}</span>}
+        </div>
+        <div className="formcomponents">
+          <label>Message</label>
+          <textarea
+            name="message"
+            className="textAreaInput"
+            value={formData.message}
+            onChange={handleInputChange}
+            placeholder="Thanks for reaching out.... "
+          />
+          {errors.message && <span className="error">{errors.message}</span>}
+        </div>
+        <div className="formcomponents">
+          {isLoading ? (
+            <div
+              className="textInput2"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: 'black',
+              }}
+            >
+              <div>
+                <TailSpin
+                  visible={true}
+                  height="30"
+                  width="30"
+                  color="blueviolet"
+                  ariaLabel="tail-spin-loading"
+                  radius="1"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                />
+              </div>
             </div>
+          ) : (
+            <input type="submit" value="Send" className="textInput2" />
           )}
         </div>
-      </form>
+      </div>
+    </form>
     );
   };
+
 
   return (
     <div className="contactHolder">
@@ -179,24 +292,29 @@ const Contact = () => {
           </div>
         </div>
         <div className="icon_section_container2">
-            <div className="iconHolder">
-              <FiTwitter fontSize={20} />
-            </div>
-
-            <div className="iconHolder">
-              <AiOutlineInstagram fontSize={20} />
-            </div>
-            <div className="iconHolder">
-              <FiLinkedin fontSize={20} />
-            </div>
+          <div className="iconHolder">
+            <FiTwitter fontSize={20} />
           </div>
-      </div>
-      <div className="Form-Container">
-        <h2 className="cardHeader" style={{marginTop:-40}}>Leave A Message ?</h2>
-        <ContactUs />
-      </div>
-    </div>
 
+          <div className="iconHolder">
+            <AiOutlineInstagram fontSize={20} />
+          </div>
+          <div className="iconHolder">
+            <FiLinkedin fontSize={20} />
+          </div>
+        </div>
+      </div>
+      <div className="Form-Container" style={{ zIndex: 1000 }}>
+        <img src="/images/DemosV3.png" alt="" />
+        <h2 className="cardHeader" style={{ marginTop: 67 }}>
+          Leave A Message ?
+        </h2>
+        <div>
+          <ContactUs />
+        </div>
+      </div>
+      <ToastContainer />
+    </div>
   );
 };
 
