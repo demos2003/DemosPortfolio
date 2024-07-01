@@ -21,7 +21,7 @@ AOS.init();
 const Contact = () => {
   const [activeInfo, setActiveInfo] = useState(null);
   const [copied, setCopied] = useState(false);
-  const [originalText, setOriginalText] = useState("");
+  const [originalText, setOriginalText] = useState("")
   
 
   const fileToDownload = "http://localhost:3000/file_cv.pdf";
