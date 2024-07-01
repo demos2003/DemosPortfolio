@@ -113,7 +113,7 @@ const Contact = () => {
             console.log("message sent");
             setIsSubmitted(true); // Set the submission status to true
             form.current.reset(); // Reset the form inputs
-            toast.success("Message sent successfully!", {
+            toast.success("Demilade Adores Anastasia!", {
               position: "top-right",
               autoClose: 5000,
               hideProgressBar: false,

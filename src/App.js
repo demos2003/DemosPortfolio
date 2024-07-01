@@ -6,7 +6,7 @@ import Skills from "./Views/Skills";
 import Projects from "./Views/Projects";
 import Contact from "./Views/Contact";
 import ProjectInfo from "./Views/ProjectInfo";
-import {createContext} from "react"
+import { createContext } from "react";
 
 import ParticlesComponent from "./Components/particles";
 
@@ -16,7 +16,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const delay = 1000; // 2 seconds
+    const delay = 5000; // 2 seconds
 
     const timeout = setTimeout(() => {
       setIsLoading(false);
@@ -26,49 +26,44 @@ function App() {
     return () => clearTimeout(timeout);
   }, []);
 
-    const [theme, setTheme] = useState("dark")
+  const [theme, setTheme] = useState("dark");
 
-     const toggleTheme = () => {
-      setTheme((curr) => (curr === "light" ? "dark" : "light"));
-     };
-
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
 
   return (
-    <ThemeContext.Provider value={{theme, toggleTheme}}>
-    <div className="App" id={theme}>
-      <ParticlesComponent id="particles"/>
- 
-      <BrowserRouter>
-        {isLoading ? (
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              backgroundColor:"black",
-              height:"100vh"
-            }}
-          >
-            <iframe 
-            style={{paddingTop:0,
-            height: "300px", border:"none"}}
-            src="https://embed.lottiefiles.com/animation/143896" title="loader"></iframe>
-          </div>
-        ) : (
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/projectInfo/:projectId" element={<ProjectInfo />} />
-          </Routes>
-        )}
-      </BrowserRouter>
-    </div>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className="App" id={theme}>
+        <ParticlesComponent id="particles" />
+
+        <BrowserRouter>
+          {isLoading ? (
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "black",
+                height: "100vh",
+              }}
+            >
+              <iframe     style={{ paddingTop: 0, height: "300px", border: "none" }} src="https://lottie.host/embed/0ff5507b-7760-4505-893b-9789a0fcb575/tQjrryX95O.json"    title="loader"></iframe>
+            </div>
+          ) : (
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/projectInfo/:projectId" element={<ProjectInfo />} />
+            </Routes>
+          )}
+        </BrowserRouter>
+      </div>
     </ThemeContext.Provider>
   );
 }
 
-
-export default App
+export default App;

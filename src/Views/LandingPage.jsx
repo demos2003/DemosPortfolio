@@ -5,11 +5,16 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FiTwitter, FiLinkedin } from "react-icons/fi";
 import Typed from "react-typed";
-
-
+import Skills from "./Skills";
+import Projects from "./Projects";
 
 const TypingEffect = () => {
-  const phrases = ["Mobile Applications.", "Web Applications.", "Reliable and Performant APIs.", "Efficient and Secure Database Systems."];
+  const phrases = [
+    "Mobile Applications.",
+    "Web Applications.",
+    "Reliable and Performant APIs.",
+    "Secure Database Systems.",
+  ];
 
   return (
     <div>
@@ -33,21 +38,23 @@ const LandingPage = () => {
 
       <div className="midBody">
         <div className="landing_section_left">
-        <div className="introTxt">
-          <h1 style={{color:"blueviolet"}}>Hi, my name is</h1>
-          <h1 className="introTxt_name">Nasiru Iyidemilade Halim.</h1>
-          <div className="introTxt_skills">
-          <h1 className="introText_skills_text">I build  </h1>
-          <TypingEffect className="typeEfect2" />
+          <div className="introTxt">
+            <h1 style={{ color: "blueviolet" }}>Hi, my name is</h1>
+            <h1 className="introTxt_name">Nasiru Iyidemilade.</h1>
+            <div className="introTxt_skills">
+              <h1 className="introText_skills_text">I build </h1>
+              <TypingEffect className="typeEfect2" />
+            </div>
+            <h1 className="colorChange">
+              I'm a software Engineer specializing in building exceptional
+              digital experiences, with real life use cases utilizing new and
+              exciting technology
+            </h1>
+            <div className="aboutBtn">
+              <p>About Me</p>
+              <AiOutlineArrowRight style={{ fontWeight: "bolder" }} />
+            </div>
           </div>
-          <h1 className="colorChange">
-            I'm a software Engineer specializing in building exceptional digital experiences, with real life use cases utilizing new and exciting technology
-          </h1>
-          <div className="aboutBtn">
-            <p>About Me</p>
-            <AiOutlineArrowRight style={{ fontWeight: "bolder" }} />
-          </div>
-        </div>
           <div className="icon_section_container">
             <div className="iconHolder">
               <FiTwitter fontSize={20} />
@@ -60,20 +67,16 @@ const LandingPage = () => {
               <FiLinkedin fontSize={20} />
             </div>
           </div>
-
         </div>
-        {/* <div className="introImg">
-          <div className="landinganimation">
-            <iframe
-              src="https://embed.lottiefiles.com/animation/63487"
-              width={690}
-              height={"100%"}
-              title="LandingIframe"
-              style={{ border: "none", marginTop: -30 }}
-
-            ></iframe>
-          </div>
-        </div> */}
+        <div className="introImg">
+          <img src="/images/img2.png" width={500} alt="" />
+        </div>
+      </div>
+      <div>
+        <Skills />
+      </div>
+      <div>
+        <Projects/>
       </div>
     </div>
   );
