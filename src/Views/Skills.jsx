@@ -6,7 +6,6 @@ import "../CSS/project.css";
 const Skills = () => {
   return (
     <div className="skill_page">
-      <Navbar />
       <div className="skillSectionContainer">
         <p
           style={{ textAlign: "center", marginBottom: 40, fontSize: 25 }}

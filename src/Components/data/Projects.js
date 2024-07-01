@@ -87,26 +87,5 @@ export const ProjectData = [
       "issues_faced": "Scalability issues with Flask application.",
       "issue_solution": "Implemented microservices architecture and load balancing."
     },
-    {
-      "id": 9,
-      "name": "Project 9",
-      "description": "Description of Project 9",
-      "githublink": "https://github.com/user/project9",
-      "duration": "6 months",
-      "image":"/images/Backend.png",
-      "stack": ["Java", "Spring Boot", "PostgreSQL"],
-      "issues_faced": "Concurrency issues in multi-threaded environment.",
-      "issue_solution": "Implemented synchronized methods and locks to handle concurrency."
-    },
-    {
-      "id": 10,
-      "name": "Project 10",
-      "description": "Description of Project 10",
-      "githublink": "https://github.com/user/project10",
-      "duration": "3 months",
-      "image":"/images/Backend.png",
-      "stack": ["JavaScript", "React Native", "SQLite"],
-      "issues_faced": "Cross-platform compatibility issues.",
-      "issue_solution": "Utilized platform-specific modules and libraries for seamless integration."
-    }
+
   ];

@@ -10,7 +10,7 @@ const Projects = ({ theme }) => {
 
   return (
     <div className="project_page">
-      <Navbar />
+
       <div className="Myprojects" id={theme}>
         <p style={{ textAlign: "center", marginBottom: 40, fontSize: 25 }} className="projectTitle">My Projects</p>
         <div className="projectHolder">

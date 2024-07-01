@@ -7,6 +7,7 @@ import { FiTwitter, FiLinkedin } from "react-icons/fi";
 import Typed from "react-typed";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import Headroom from "react-headroom";
 
 const TypingEffect = () => {
   const phrases = [
@@ -34,9 +35,10 @@ const TypingEffect = () => {
 const LandingPage = () => {
   return (
     <div className="LandingBody">
-      <Navbar />
-
-      <div className="midBody">
+      <Headroom>
+        <Navbar />
+      </Headroom>
+      <div className="midBody" id="home">
         <div className="landing_section_left">
           <div className="introTxt">
             <h1 style={{ color: "blueviolet" }}>Hi, my name is</h1>
@@ -72,11 +74,11 @@ const LandingPage = () => {
           <img src="/images/img2.png" width={500} alt="" />
         </div>
       </div>
-      <div>
+      <div id="skills">
         <Skills />
       </div>
-      <div>
-        <Projects/>
+      <div id="projects">
+        <Projects />
       </div>
     </div>
   );
