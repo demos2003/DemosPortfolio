@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../Components/Navbar1";
 import SkillBar from "../Components/SkillBar";
 import "../CSS/project.css";
 

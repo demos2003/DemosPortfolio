@@ -85,15 +85,7 @@ const Contact = () => {
         [name]: value,
       });
     };
-  
-    const validateForm = () => {
-      const errors = {};
-      if (!formData.user_name.trim()) errors.user_name = 'Name is required';
-      if (!formData.user_email.trim()) errors.user_email = 'Email is required';
-      if (!formData.user_phone.trim()) errors.user_phone = 'Phone number is required';
-      if (!formData.message.trim()) errors.message = 'Message is required';
-      return errors;
-    };
+
 
 
     const sendEmail = (e) => {

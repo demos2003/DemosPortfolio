@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../Components/Navbar1";
 import "../CSS/project.css";
 import { ProjectData } from "../Components/data/Projects";
 import { Link } from "react-router-dom";
