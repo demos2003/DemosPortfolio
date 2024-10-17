@@ -8,6 +8,7 @@ import Typed from "react-typed";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Headroom from "react-headroom";
+import Articles from "./Articles";
 
 const TypingEffect = () => {
   const phrases = [
@@ -79,6 +80,9 @@ const LandingPage = () => {
       </div>
       <div id="projects">
         <Projects />
+      </div>
+      <div id="Articles">
+        <Articles/>
       </div>
     </div>
   );

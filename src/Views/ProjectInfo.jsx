@@ -20,7 +20,7 @@ const ProjectInfo = () => {
             className={`project_image ${selectedProject === project.id  ? 'sidebar_active' : ''}`}
             onClick={() => setSelectedProject(project.id)}
           >
-            {project.name}
+           <p style={{fontWeight:"700", fontSize:17}}> {project.name}</p>
             
           </div>
         ))}
@@ -40,7 +40,7 @@ const ProjectInfo = () => {
               </div>
             </div>
             <div className='project_info_image'>
-              <div className='image_demo'></div>
+            <img src={ProjectData[selectedProject - 1].image} alt={ProjectData[selectedProject - 1].name} className='selected_project_image' />
             </div>
           </div>
         )}
