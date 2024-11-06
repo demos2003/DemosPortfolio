@@ -36,7 +36,6 @@ const ProjectInfo = () => {
                 <p>Stack: {JSON.stringify(ProjectData[selectedProject - 1].stack)}</p>
                 <p>Problem Faced: {ProjectData[selectedProject - 1].issues_faced}</p>
                 <p>Problem Solution: {ProjectData[selectedProject - 1].issue_solution}</p>
-                <p>Github Link: <a href={ProjectData[selectedProject - 1].githublink}>{ProjectData[selectedProject - 1].githublink}</a></p>
               </div>
             </div>
             <div className='project_info_image'>

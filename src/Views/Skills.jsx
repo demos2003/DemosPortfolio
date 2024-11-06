@@ -8,7 +8,7 @@ const Skills = () => {
       <div className="skillSectionContainer">
         <p
           style={{ textAlign: "center", marginBottom: 40, fontSize: 25 }}
-          className="projectTitle"
+          className="projectTitle skill-header"
         >
           My Skills
         </p>

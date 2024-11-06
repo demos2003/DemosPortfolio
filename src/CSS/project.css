@@ -51,8 +51,9 @@
 }
 
 .projectCard {
-  background-color: blueviolet;
+  background-color: red;
   border-radius: 5px;
+  /* background-color: ; */
 }
 
 #dark .projecttitle {
@@ -111,12 +112,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100% !important;
+    width: 90%;
 
   }
 
   .Myprojects {
     height: 100%;
+    margin-top: 600px;
+
   }
 
 }

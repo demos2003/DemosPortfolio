@@ -318,9 +318,7 @@
   
 
 
-  .LandingBody{
-    height: 100vh;
-  }
+
 
   .landing_section_left{
     width: 100%;
@@ -379,6 +377,46 @@
 
   .icon_section_container{
     margin-top: 200px;
+  }
+
+  .introImg{
+    display: none;
+  }
+
+  .colorChange{
+    width: 100%;
+    font-size: 20px;
+    margin-top: 30px;
+
+  }
+
+
+  .skillSectionContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    height: 90vh; 
+     margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    padding-top: 50%;
+  
+   }
+
+
+   .skill-header{
+    margin-bottom: -50px !important;
+   }
+
+   .introTxt_skills{
+    display: none;
+   }
+
+   .serviceTexts {
+    width: 100%;
+    margin-right: 0%;
+    padding-left: 0;
   }
   
 }
