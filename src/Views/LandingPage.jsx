@@ -12,10 +12,10 @@ import Articles from "./Articles";
 
 const TypingEffect = () => {
   const phrases = [
-    "Mobile Applications.",
-    "Web Applications.",
-    "Reliable and Performant APIs.",
-    "Secure Database Systems.",
+    "I build Mobile Applications.",
+    "I build Web Applications.",
+    "I build Reliable and Performant APIs.",
+    "I build Secure Database Systems.",
   ];
 
   return (
@@ -45,7 +45,7 @@ const LandingPage = () => {
             <h1 style={{ color: "blueviolet" }}>Hi, my name is</h1>
             <h1 className="introTxt_name">Nasiru Iyidemilade.</h1>
             <div className="introTxt_skills">
-              <h1 className="introText_skills_text">I build </h1>
+              {/* <h1 className="introText_skills_text">I build </h1> */}
               <TypingEffect className="typeEfect2" />
             </div>
             <h1 className="colorChange">
