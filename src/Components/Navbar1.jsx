@@ -57,17 +57,17 @@ const Navbar = () => {
           </div>
         </div>
         <div className="NavEnd">
-          <div className="switch">
+          {/* <div className="switch">
             <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
-          </div>
+          </div> */}
           <div className="NavBTN">
             <NavLink to="/contact">Lets Talk</NavLink>
           </div>
         </div>
       </div>
-      <div className="hamburger">
+      {/* <div className="hamburger">
         <SwipeableTemporaryDrawer />
-      </div>
+      </div> */}
     </div>
   );
 };
